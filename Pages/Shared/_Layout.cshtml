@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - WeblawyersBox</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="sistema de gestao para escritorios de advogados">
+    <meta name="keywords" content="Advogados,escritorios,advogacia,gestao,processos judiciais,juridico,Audiencias">
+    <meta name="author" content="Franco Lucky Damiao">
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/assets/images/law.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link href="~/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+  
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/themify-icons/themify-icons.css"/>
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/icofont/css/icofont.css">
+    <link href="~/lib/jqueryui/themes/south-street/jquery-ui.css" rel="stylesheet" />
+    <!-- Horizontal-Timeline css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/dashboard/horizontal-timeline/css/style.css">
+    <!-- flag icon framework css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/flag-icon/flag-icon.min.css"/>
+    <!-- Menu-Search css -->
+    <link href="~/lib/summernote/summernote-bs4.css" rel="stylesheet" />
+    <link href="~/lib/select2/css/select2.css" rel="stylesheet" />
+    <link href="~/lib/fullcalendario/lib/main.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/menu-search/css/component.css"/>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- Data Table Css -->
+    <link rel="stylesheet" type="text/css" href="~/lib/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/data-table/css/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="~/lib/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+
+
+
+
+</head>
+<body class="horizontal-static">
+    @*Pre-loader start*@
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div></div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <!-- Menu header start -->
+    <nav class="navbar header-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-logo">
+                <a class="mobile-menu" id="mobile-collapse" href="#!">
+                    <i class="ti-menu"></i>
+                </a>
+                <a class="mobile-search morphsearch-search" href="#">
+                    <i class="ti-search"></i>
+                </a>
+                <a href="/index">
+
+                    <img class="img-lg" src="~/images/LAWYERBOX.png" alt="LAWYER'S BOX" width="200PX" />
+
+                </a>
+                <a class="mobile-options">
+                    <i class="ti-more"></i>
+                </a>
+            </div>
+            <div class="navbar-container container-fluid">
+                <div>
+                    <ul class="nav-left">
+                        <li>
+                            <a id="collapse-menu" href="#">
+                                <i class="ti-menu"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="main-search morphsearch-search" href="#">
+                                <!-- themify icon -->
+                                <i class="ti-search"></i>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <ul class="nav-right">
+                        <partial name="_LoginPartial" />
+                    </ul>
+                    <!-- search -->
+                    <div id="morphsearch" class="morphsearch">
+                        <form class="morphsearch-form">
+                            <input class="morphsearch-input" type="search" placeholder="Search..." />
+                            <button class="morphsearch-submit" type="submit">Search</button>
+                        </form>
+
+                        <!-- /morphsearch-content -->
+                        <span class="morphsearch-close"><i class="icofont icofont-search-alt-1"></i></span>
+                    </div>
+                    <!-- search end -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Menu header end -->
+    <!-- Menu aside start -->
+    <div class="main-menu">
+        <div class="main-menu-header">
+            <img class="img-40" src="~/assets/images/user.png" alt="User-Profile-Image">
+            <div class="user-details">
+                <span>John Doe</span>
+                <span id="more-details">UX Designer<i class="icon-arrow-down"></i></span>
+            </div>
+        </div>
+        <div class="main-menu-content">
+
+            <ul class="main-navigation">
+                <li class="nav-item">
+                    <a asp-area="" asp-page="/index">
+                        <i class="ti-home"></i>
+                        <span>Painel</span>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-page="/Cliente/index">
+                        <i class="ti-user"></i>
+                        <span>Clientes</span>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a asp-area="" asp-page="/processo/listarprocessos">
+                        <i class="ti-archive"></i>
+                        <span>Processos</span>
+                    </a>
+
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <!-- Menu aside end -->
+    <section>
+        <div class="main-body">
+            <div class="page-wrapper">
+                @RenderBody()
+
+            </div>
+        </div>
+    </section>
+    @*<div class="footer bg-inverse">
+        <p class="text-center">Copyright &copy; 2017 FLAT UI ADMIN , All rights reserved.</p>
+    </div>*@
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - WeblawyersBox - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>*@
+
+    <!-- Required Jquery -->
+    <script src="~/lib/jquery/jquery.js"></script>
+
+
+    <script src="~/lib/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+    @*<script src="~/lib/bower_components/tether/dist/js/tether.min.js"></script>*@
+    <script src="~/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- jquery slimscroll js -->
+    <script src="~/lib/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- modernizr js -->
+    <script src="~/lib/bower_components/modernizr/modernizr.js"></script>
+    <script src="~/lib/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+    <!-- classie js -->
+    <script src="~/lib/bower_components/classie/classie.js"></script>
+    <!-- full calendario js -->
+    <script src="~/lib/moment.js/moment.js"></script>
+    <script src="~/lib/fullcalendario/lib/main.js"></script>
+    <script src="~/lib/fullcalendario/locales-all.js"></script>
+
+    <!-- data-table js -->
+    <script src="~/lib/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/lib/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/lib/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <!-- Horizontal-Timeline js -->
+    <script src="~/js/jquery.timeago.js"></script>
+    <script type="text/javascript" src="~/assets/pages/dashboard/horizontal-timeline/js/main.js"></script>
+    <!-- i18next.min.js -->
+    <script src="/lib/bower_components/i18next/i18next.min.js"></script>
+    <script src="/lib/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script>
+    <script src="/lib/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="/lib/bower_components/jquery-i18next/jquery-i18next.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/assets/js/script.js"></script>
+    @await Component.InvokeAsync("Notyf")
+    <script src="~/lib/select2/js/select2.js"></script>
+
+
+
+
+    <script src="~/lib/summernote/summernote-bs4.js"></script>
+
+    <script src="~/js/Dialogbox.js"></script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

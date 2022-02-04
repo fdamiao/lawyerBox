@@ -1,0 +1,116 @@
+﻿@page
+@model WeblawyersBox.Pages.Cliente.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Clientes</h5>
+
+            </div>
+            <div class="card-block">
+
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="Cliente_tb.Iduser" hidden="hidden" value="@User.Identity.Name" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cliente_tb.TipoPessoa" class="control-label"></label>
+                        <select asp-for="Cliente_tb.TipoPessoa" class="form-control">
+                            <option value="">--Tipo de cliente --</option>
+                            <option value="Singular">Singular</option>
+                            <option value="Juridica">Juridica</option>
+                        </select>
+                        <span asp-validation-for="Cliente_tb.TipoPessoa" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.Nome" class="control-label"></label>
+                                <input asp-for="Cliente_tb.Nome" class="form-control" placeholder="Nome" />
+                                <span asp-validation-for="Cliente_tb.Nome" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.apelido" class="control-label"></label>
+                                <input asp-for="Cliente_tb.apelido" class="form-control" placeholder="apelido" />
+                                <span asp-validation-for="Cliente_tb.apelido" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.Ndocumento" class="control-label"></label>
+                                <input asp-for="Cliente_tb.Ndocumento" class="form-control" placeholder="Doxumento de identidade" />
+                                <span asp-validation-for="Cliente_tb.Ndocumento" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.Naturalidade" class="control-label"></label>
+                                <input asp-for="Cliente_tb.Naturalidade" class="form-control" placeholder="Narularidade" />
+                                <span asp-validation-for="Cliente_tb.Naturalidade" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cliente_tb.Contacto" class="control-label"></label>
+                        <input asp-for="Cliente_tb.Contacto" class="form-control" placeholder="Contacto telefonico" />
+                        <span asp-validation-for="Cliente_tb.Contacto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cliente_tb.Morada" class="control-label"></label>
+                        <input asp-for="Cliente_tb.Morada" class="form-control" />
+                        <span asp-validation-for="Cliente_tb.Morada" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.profissao" class="control-label"></label>
+                                <input asp-for="Cliente_tb.profissao" class="form-control" />
+                                <span asp-validation-for="Cliente_tb.profissao" class="text-danger"></span>
+                            </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="Cliente_tb.empresa" class="control-label"></label>
+                                    <input asp-for="Cliente_tb.empresa" class="form-control" />
+                                    <span asp-validation-for="Cliente_tb.empresa" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.nacionalidade" class="control-label"></label>
+                                <input asp-for="Cliente_tb.nacionalidade" class="form-control" />
+                                <span asp-validation-for="Cliente_tb.nacionalidade" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Cliente_tb.email" class="control-label"></label>
+                                <input asp-for="Cliente_tb.email" class="form-control" />
+                                <span asp-validation-for="Cliente_tb.email" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        <div>
+            <a asp-page="Index">Back to List</a>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

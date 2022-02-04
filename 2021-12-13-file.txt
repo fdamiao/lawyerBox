@@ -1,0 +1,168 @@
+2021-12-13 11:14:37.0139|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 11:14:37.0763|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 11:14:37.0763|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 11:15:06.5542|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'db_a7d5c7_weblawyersdb' on server 'SQL5105.site4now.net'.
+2021-12-13 11:15:06.8201|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'WeblawyersBox.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2021-12-13 11:15:06.8949|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 11:15:35.2384|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user 50ad06ae-c592-4da8-58c4-08d9ba91d4dc.
+2021-12-13 11:15:35.2384|WARN|Microsoft.AspNetCore.Identity.SignInManager|User 50ad06ae-c592-4da8-58c4-08d9ba91d4dc failed to provide the correct password.
+2021-12-13 11:21:20.5579|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 11:21:20.5905|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 11:21:20.5905|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 11:26:30.2033|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 11:26:30.2355|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 11:26:30.2355|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 11:27:13.6822|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 11:28:39.9519|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 11:28:39.9866|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 11:28:39.9866|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 11:29:26.2602|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 11:29:28.8324|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 11:30:32.4044|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 11:34:38.8475|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 11:39:09.2594|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 11:39:09.3470|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 11:39:09.3538|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 14:57:51.0487|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 14:57:51.1155|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 14:57:51.1214|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 15:56:21.3494|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 15:56:21.3986|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 15:56:21.4046|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 15:59:36.8824|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 15:59:36.9603|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 15:59:36.9674|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 16:04:44.6831|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 16:04:44.7771|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 16:04:44.7914|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 16:16:08.1869|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 16:16:08.2591|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 16:16:08.2699|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:06:13.1850|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:06:13.4517|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:06:13.4517|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:07:48.4901|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 21:14:49.5339|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:14:49.5790|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:14:49.5790|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:15:01.7967|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 21:17:40.3593|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:17:40.4601|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:17:40.4685|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:17:53.0412|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 21:23:43.1130|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:23:43.1506|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:23:43.1506|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:23:55.1698|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 21:25:43.3321|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:25:43.3992|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:25:43.4111|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:34:28.8168|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:34:28.8573|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:34:28.8573|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:42:36.7285|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:42:36.7933|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:42:36.7933|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:43:29.5549|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 21:47:53.5560|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 21:47:53.7277|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 21:47:53.7391|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 21:48:17.0873|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 22:30:14.8930|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 22:30:15.1711|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 22:30:15.1711|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 22:31:07.9748|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 22:38:49.3395|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 22:38:49.4058|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 22:38:49.4058|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 22:46:31.5362|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 22:49:37.2532|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 22:49:37.3756|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 22:49:37.3878|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 22:49:47.8127|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 22:50:11.8112|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:03:34.2133|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:03:34.2602|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:03:34.2602|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:09:02.5829|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:09:02.6664|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:09:02.6664|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:09:17.4009|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:11:20.9307|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:11:21.0229|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:11:21.0329|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:11:34.3827|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:12:15.1056|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:12:15.1906|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:12:15.2021|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:14:45.5710|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:14:45.6624|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:14:45.6717|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:24:03.4230|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:24:03.4948|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:24:03.4948|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:26:23.5098|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:26:23.5932|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:26:23.5932|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:30:02.6582|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:30:02.7326|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:30:02.7326|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:36:52.1543|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:36:52.2321|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:36:52.2321|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:38:21.2714|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:38:21.3496|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:38:21.3578|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:39:14.0462|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:39:14.1257|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:39:14.1257|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:45:36.3045|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:45:36.3727|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:45:36.3727|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:45:48.9863|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:46:49.6958|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:46:49.7696|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:46:49.7790|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:47:00.3130|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:48:54.8450|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:48:54.9316|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:48:54.9411|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:49:04.3531|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:51:41.7859|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:51:41.8882|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:51:41.8882|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:52:27.0929|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:52:49.2194|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:53:22.7546|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:54:14.7941|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:54:14.9022|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:54:14.9204|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-13 23:54:41.8710|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-13 23:59:29.0482|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-13 23:59:29.1579|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-13 23:59:29.1698|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox

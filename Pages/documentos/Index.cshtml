@@ -1,0 +1,74 @@
+﻿@page
+@*@model WeblawyersBox.Pages.documentos.IndexModel*@
+@model WeblawyersBox.Pages.documentos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<p>
+
+    <a asp-page="./Create" asp-route-id="@Request.Query["id"]" class="btn btn-block btn-default"><i class="fa fa-folder-plus"></i> Novo processo</a>
+
+</p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.documentos_Processos_s[0].nomeDoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.documentos_Processos_s[0].ContentType)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.documentos_Processos_s[0].NomeFicheiro)
+            </th>
+
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.documentos_Processos_s)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.nomeDoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentType)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeFicheiro)
+                </td>
+
+
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div paging-model="@Model.dadosdePaginacao" page-class="btn border mt-3"
+     page-class-links="text-center" page-class-normal="btn btn-light" page-class-selected="btn btn-dark  active"
+     page-class-label="p-2 font-weight-bold  pt-md-2  text-center" class="text-center">
+</div>

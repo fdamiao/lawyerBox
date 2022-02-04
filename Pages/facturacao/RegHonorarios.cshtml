@@ -1,0 +1,78 @@
+﻿@page
+@model WeblawyersBox.Pages.facturacao.RegHonorariosModel
+
+@{
+    ViewData["Title"] = "RegHonorarios";
+}
+
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-attachment"></i>Registar Honorarios </h5>
+            </div>
+            <div class="card-block ">
+                <form method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                    <div class="row">
+                        <div class="col-lg 6">
+                            <div class="form-group">
+                                <label asp-for="FacturacaoTbs.datarecebimento" class="control-label"></label>
+                                <input asp-for="FacturacaoTbs.datarecebimento" class="form-control" />
+                                <span asp-validation-for="FacturacaoTbs.datarecebimento" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg 6">
+                            <div class="form-group">
+                                <label asp-for="FacturacaoTbs.valor" class="control-label"></label>
+                                <input asp-for="FacturacaoTbs.valor" class="form-control" type="number" />
+                                <span asp-validation-for="FacturacaoTbs.valor" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FacturacaoTbs.descricaoDovalor" class="control-label"></label>
+                        <input asp-for="FacturacaoTbs.descricaoDovalor" class="form-control" />
+                        <span asp-validation-for="FacturacaoTbs.descricaoDovalor" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label asp-for="FacturacaoTbs.Despesaestatus" class="control-label"></label>
+                        <select asp-for="FacturacaoTbs.Despesaestatus" class="form-control" asp-items="@Html.GetEnumSelectList<despesaestatus>()"></select>
+                        <span asp-validation-for="FacturacaoTbs.Despesaestatus" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+
+                        <label asp-for="fileUpload.FormFiles" class="control-label"></label><br />
+                        <input type="file" asp-for="fileUpload.FormFiles" aria-label="Buscar comprovativo" accept=".xls, .xlsx,.pdf,.jpeg,.docx,.doc,.jpg">
+
+
+                    </div>
+                    <input asp-for="FacturacaoTbs. Iduser" hidden="hidden" value="@User.Identity.Name" />
+                    <div class="form-group">
+                        <label asp-for="FacturacaoTbs.idprocesso" class="control-label" hidden="hidden"></label>
+                        <input asp-for="FacturacaoTbs.idprocesso" class="form-control" hidden="hidden" value="@Request.Query["id"]" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" value="Create" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                        <a asp-page="/Processo/Details" asp-route-id="@Request.Query["id"]" class="btn btn-secondary"><i class="fa fa-backward"></i> voltar</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

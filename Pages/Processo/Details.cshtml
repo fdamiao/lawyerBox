@@ -1,0 +1,728 @@
+﻿@page
+@model WeblawyersBox.Pages.Processo.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+
+
+
+}
+
+
+<h4></h4>
+<hr />
+<!-- Task-detail-left start -->
+<!-- Task-detail-right start -->
+<div id="modal-placeholder"></div>
+<div class="row">
+    <div class="col-xl-4 col-lg-12 push-xl-8 task-detail-right">
+        @*descricao*@
+        <div class="card card-border-info">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-clock-time m-r-10"></i>Descricao</h5>
+            </div>
+            <div class="card-block">
+                <div class="counter">
+                    <div class="yourCountdownContainer">
+                        <div class="row d-sm-block">
+                            <p>
+                                @Html.Raw(Model.sanitizer.Sanitize( Model.Processo_tb.Observacao))
+                            </p>
+                        </div>
+                        <!-- end of row -->
+                    </div>
+                    <!-- end of yourCountdown -->
+                </div>
+                <!-- end of counter -->
+            </div>
+            <div class="card-footer">
+
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        @*<button type="button" data-toggle="modal" data-target="#default-Modal"><i class="fa fa-list"></i> Editar</button>*@
+                       @if (Model.Estadoss == estadoss.Activo)
+                       {
+
+
+                        <a asp-page="./editardecricao" asp-route-id="@Request.Query["id"]" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-list"></i> Editar</a>
+                       }
+                        @*<button type="button" class="btn btn-primary waves-effect waves-light p-l-40 p-r-40">Save</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*Detalhes do*@
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-ui-note m-r-10"></i> Detalhes do Processo</h5>
+            </div>
+            <div class="card-block task-details">
+                <table class="table table-border table-xs">
+                    <tbody>
+                        <tr>
+                            <td><i class="icofont icofont-user"></i> client:</td>
+                            <td class="text-right">@Html.DisplayFor(model => model.cliente.Nome)</td>
+                        </tr>
+                        <tr>
+                            <td><i class="icofont icofont-numbered"></i> N:</td>
+                            <td class="text-right">@Html.DisplayFor(model => model.Processo_tb.NProcesso)</td>
+                        </tr>
+                        <tr>
+                            <td><i class="icofont icofont-contrast"></i> Reponsavel:</td>
+                            <td class="text-right"><span class="f-right"><a href="#">  @Html.DisplayFor(model => model.Processo_tb.responsavel)</a></span></td>
+                        </tr>
+
+                        <tr>
+                            <td><i class="icofont icofont-id-card"></i> Created:</td>
+                            <td class="text-right">  @Html.DisplayFor(model => model.Processo_tb.datacreat)</td>
+                        </tr>
+        
+                        <tr>
+                            <td><i class="icofont icofont-spinner-alt-3"></i> status:</td>
+                            <td class="text-right">  @Html.DisplayFor(model => model.Processo_tb.Estados)</td>
+                        </tr>
+                        <tr>
+                            <td><i class="icofont icofont-ui-love-add"></i> Local:</td>
+                            <td class="text-right"><a href="#">  @Html.DisplayFor(model => model.Processo_tb.Categorias)</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <div class="btn-group dropdown-split-warning">
+                            <button type="button" class="btn btn-warning"><i class="icofont icofont-plus"></i>Editar</button>
+                            <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle primary</span>
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                @if (Model.Estadoss == estadoss.Activo)
+                                {
+
+                                    @if (Model.Processo_tb.tipo == tipo.Processo)
+                                    {
+
+
+                                        <a asp-page="./Processos" asp-route-id="@Model.Processo_tb.Ids" class="dropdown-item waves-light waves-effect"><i class="fa fa-edit"></i> Editar</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-page="./Casos" asp-route-id="@Model.Processo_tb.Ids" class="dropdown-item waves-light waves-effect"><i class="fa fa-edit"></i> Editar</a>
+
+                                    }
+                                }
+                                    <div class="dropdown-divider"></div>
+                                    <a asp-page="./Actualizarstatus" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="icofont icofont-lock"></i> Terminar</a>
+                                    @*<button type="button" class="dropdown-item waves-light waves-effect" data-toggle="ajax-modal" data-url="@Url.Page("Details", "AlterarStatos")">
+                Add contact
+            </button>*@
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        @*documentos*@
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-header-text"><i class="icofont icofont-attachment"></i> Documentos <label class="badge badge-info">@ViewBag.Ndocumotes</label> |<label class="badge badge-info">@ViewBag.TotalUsado MB</label> </h5>
+        </div>
+       
+            <div class="card-block task-attachment">
+
+                <ul class="media-list">
+
+                    @foreach (var item in Model.documentos_Processos)
+                    {
+                   
+                        
+                        <li class="media d-flex m-b-10">
+                            <div class="m-r-20 v-middle">
+                                <i class="icofont icofont-file-word f-28 text-muted"></i>
+                            </div>
+                            <div class="media-body">
+                                <a href="#" class="m-b-5 d-block">@Html.DisplayFor(modelItem => item.nomeDoc)</a>
+                                <div class="text-muted">
+
+                                    <span>
+                                        Data <a href="#">@TimeAgo.TimeAgos(item.datacreat.Date)</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="f-right v-middle text-muted">
+                                <a href="@Url.Page("Details", "DownloadFile", new { fileName = item.NomeFicheiro,idprocesso=@Request.Query["id"] })"><i class="icofont icofont-download-alt f-18"></i></a>
+                            </div>
+                        </li>
+                           
+                    
+                    }
+
+                </ul>
+        
+        <div class="row text-center">
+            <div class="col-sm-12">
+                @if (Model.Estadoss == estadoss.Activo)
+                {
+
+                    <a asp-page="/documentos/Create" asp-route-id="@Request.Query["id"]" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-file-pdf-o"></i> Novos docs</a>
+                }     @*<button type="button" class="btn btn-primary waves-effect waves-light p-l-40 p-r-40">Save</button>*@
+                </div>
+        </div>
+        </div>
+    </div>
+        @*pessoas involvidas*@
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-users-alt-4"></i> Participantes <label class="badge badge-primary">@ViewBag.Npessoas</label></h5>
+            </div>
+            <div class="card-block user-box assign-user">
+                @foreach (var item in Model.pessoas_Envolvidas)
+                {
+                    <div class="media">
+                        <div class="media-left media-middle photo-table">
+                            <a href="#">
+                                <img class="img-circle img-60" src="~/assets/images/1615060.png" alt="chat-user">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h6>@Html.DisplayFor(modelItem => item.NomePessoa)</h6>
+                            <p>@Html.DisplayFor(modelItem => item.Posicao)- @Html.DisplayFor(modelItem => item.Contacto)</p>
+                          
+                        </div>
+                        <div>
+                            <a href="#!" class="text-muted"> <i class="icon-options-vertical"></i></a>
+                        </div>
+                        @*<div class="f-right v-middle text-muted">
+                            <form asp-page-handler="Delete" method="delete" asp-route-id="@item.Ids"
+                                  onclick="return confirm('Are you sure you want to delete this?')">
+                                <button type="submit" class="btn btn-default"><i class="fas fa-trash-alt text-white"></i></button>
+                            </form>
+                            <a href="@Url.Page("Details", "Deletsures", new { idpessoa = item.Ids })" class="text-danger"><i class="fa fa-trash"></i></a>
+                        </div>*@
+                    </div>
+                }
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        @if (Model.Estadoss == estadoss.Activo)
+                        {
+                            <a asp-page="/PessoasEnvolvidas/Create" asp-route-id="@Request.Query["id"] " class="btn btn-info"><i class="fa fa-user-circle-o"></i> Incluir pessoas</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*actividades diarias*@
+<div class="col-xl-8 col-lg-12 pull-xl-4">
+    @if (Model.Processo_tb.tipo == tipo.Processo)
+    {
+        <div class="card comment-block">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-comment m-r-5"></i>  @Html.DisplayFor(model => model.Processo_tb.tipo)- @Html.DisplayFor(model => model.Processo_tb.TituloProcesso)</h5>
+
+                <div class="f-right">
+                    @if (Model.Estadoss == estadoss.Activo)
+                    {
+                        <div class="btn-group dropdown-split-primary">
+                            <button type="button" class="btn btn-primary"><i class="icofont icofont-plus"></i>Adicionar</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle primary</span>
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                <a asp-page="/eventos/CriarEventos" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="icofont icofont-clock-time"></i>Eventos</a>
+                                <a asp-page="/Atividades/NovaActividade" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="icofont icofont-plus"></i> Actividades</a>
+                                <div class="dropdown-divider"></div>
+                                <a asp-page="/TimeSheet/TimeSheet" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="icofont icofont-file-excel"></i> TimeSheet</a>
+                                <a asp-page="/facturacao/RegHonorarios" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="icofont icofont-money-bag"></i> Honorarios</a>
+                                <a asp-page="/Despesas/regDespesas" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="icofont icofont-bucket"></i> Despesas</a>
+
+
+                                <div class="dropdown-divider"></div>
+                                <a asp-page="/Facturas/AddFaturar" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect">  <i class="fa fa-file-invoice"></i> Factura</a>
+
+
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+            <div class="card-block">
+
+
+                <div class="col-lg-12">
+
+                    <ul class="nav nav-tabs md-tabs " role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#home7" role="tab"><i class="icofont icofont-clock-time"></i>Eventos<br /> <label class="badge badge-info">@ViewBag.Neventos</label></a>
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#Acticidades" role="tab"><i class="icofont icofont-plus "></i> Actividades <br /><label class="badge badge-info">@ViewBag.Nactifeito</label>|<label class="badge badge-warning">@ViewBag.nAtrazads</label></a>
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#messages7" role="tab"><i class="icofont icofont-file-excel"></i> Time Sheet <br /><label class="badge badge-info">@ViewBag.Notalhoras H</label></a>
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#Honorarios" role="tab"><i class="icofont icofont-money-bag"></i> Honorarios <label class="badge badge-info">@ViewBag.TotalHonorarios MZN</label></a>
+                            <div class="slide"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " data-toggle="tab" href="#despesas" role="tab"><i class="icofont icofont-bucket"></i> Despesas <label class="badge badge-info">@ViewBag.Totaldespesa MZN</label></a>
+                            <div class="slide"></div>
+                        </li>
+
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content card-block">
+                        <div class="tab-pane active" id="home7" role="tabpanel">
+                            <div class="table-responsive">
+                                @*eventos*@
+                                <table id="" class="table display dt-responsive task-list-table table-striped table-bordered ">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].DataMarcada)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].Estado)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].prioridade)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].evento)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].LocaldaAudiencia)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].descricaevento)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Audiencia_tab[0].responsavel)
+                                            </th>
+                                            @*<th>
+                                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].Datatermino)
+                                                </th>*@
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Audiencia_tab)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.DataMarcada)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Estado)
+                                                </td>
+                                                <td>
+                                                    @if (item.prioridade.Equals(prioridade.Critica))
+                                                    {
+                                                        <span class="label label-danger">
+                                                            @Html.DisplayFor(modelItem => item.prioridade)
+                                                        </span>
+                                                    }
+                                                    @if (item.prioridade.Equals(prioridade.Baixa))
+                                                    {
+                                                        <span class="label label-primary">
+                                                            @Html.DisplayFor(modelItem => item.prioridade)
+                                                        </span>
+                                                    }
+                                                    @if (item.prioridade.Equals(prioridade.Alta))
+                                                    {
+                                                        <span class="label label-warning">
+                                                            @Html.DisplayFor(modelItem => item.prioridade)
+                                                        </span>
+                                                    }
+                                                    @if (item.prioridade.Equals(prioridade.Media))
+                                                    {
+                                                        <span class="label label-info">
+                                                            @Html.DisplayFor(modelItem => item.prioridade)
+                                                        </span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.evento)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.LocaldaAudiencia)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.descricaevento)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.responsavel)
+                                                </td>
+                                                @*<td>
+                                                        @Html.DisplayFor(modelItem => item.Datatermino)
+                                                    </td>*@
+                                                <td>
+                                                    @if (Model.Estadoss == estadoss.Activo)
+                                                    {
+                                                        <a asp-page="./eventos/CriarEvento" asp-route-id="@item.Ids">Edit</a>
+
+                                                        <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="Acticidades" role="tabpanel">
+                            @*Actividades*@
+                            <div class="table-responsive">
+                                <table id="" class="table display dt-responsive task-list-table table-striped table-bordered ">
+                                    <thead>
+                                        <tr>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.actividadesProcessos[0].Descricaoactividades)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.actividadesProcessos[0].data)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.actividadesProcessos[0].prioridades)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.actividadesProcessos[0].status)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.actividadesProcessos[0].responsavel)
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.actividadesProcessos)
+                                        {
+                                            <tr>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Descricaoactividades)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.data)
+                                                </td>
+                                                <td>
+                                                    @if (item.prioridades.Equals(prioridade.Critica))
+                                                    {
+                                                        <span class="label label-danger">
+                                                            @Html.DisplayFor(modelItem => item.prioridades)
+                                                        </span>
+                                                    }
+                                                    @if (item.prioridades.Equals(prioridade.Baixa))
+                                                    {
+                                                        <span class="label label-primary">
+                                                            @Html.DisplayFor(modelItem => item.prioridades)
+                                                        </span>
+                                                    }
+                                                    @if (item.prioridades.Equals(prioridade.Alta))
+                                                    {
+                                                        <span class="label label-warning">
+                                                            @Html.DisplayFor(modelItem => item.prioridades)
+                                                        </span>
+                                                    }
+                                                    @if (item.prioridades.Equals(prioridade.Media))
+                                                    {
+                                                        <span class="label label-info">
+                                                            @Html.DisplayFor(modelItem => item.prioridades)
+                                                        </span>
+                                                    }
+
+                                                </td>
+                                                <td>
+
+                                                    @Html.DisplayFor(modelItem => item.status)
+                                                </td>
+
+                                                <td>
+
+                                                    @Html.DisplayFor(modelItem => item.responsavel)
+
+                                                </td>
+                                                <td>
+                                                    @if (Model.Estadoss == estadoss.Activo)
+                                                    {
+                                                        <a asp-page="/Atividades/Edit" asp-route-id="@item.Ids"><i class="fa fa-edit"></i></a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="despesas" role="tabpanel">
+                            <div class="table-responsive">
+                                <table id="" class="table display dt-responsive task-list-table table-striped table-bordered ">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.despesad[0].datarecebimento)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.despesad[0].valor)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.despesad[0].descricaoDovalor)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.despesad[0].comprovativo)
+                                            </th>
+
+
+
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.despesad)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.datarecebimento)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.valor)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.descricaoDovalor)
+                                                </td>
+
+                                                <td>
+                                                    <a href="@Url.Page("Details", "DownloadFile", new { fileName = item.comprovativo, idprocesso = @Request.Query["id"] })"><i class="icofont icofont-file-document"></i></a>
+
+
+                                                </td>
+
+
+
+                                                <td>
+                                                    @if (Model.Estadoss == estadoss.Activo)
+                                                    {
+                                                        <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a>
+
+                                                        <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="Honorarios" role="tabpanel">
+                            <div class="table-responsive">
+                                <table id="" class="table dt-responsive display task-list-table table-striped table-bordered ">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FacturacaoTbs[0].valor)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FacturacaoTbs[0].descricaoDovalor)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FacturacaoTbs[0].datarecebimento)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FacturacaoTbs[0].comprovativo)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FacturacaoTbs[0].Despesaestatus)
+                                            </th>
+
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.FacturacaoTbs)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.valor)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.descricaoDovalor)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.datarecebimento)
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Page("Details", "DownloadFile", new { fileName = item.comprovativo, idprocesso = @Request.Query["id"] })"><i class="icofont icofont-file-document"></i></a>
+
+
+                                                </td>
+
+                                                <td>
+                                                    @if (item.Despesaestatus.Equals(despesaestatus.Arealizar))
+                                                    {
+                                                        <span class="label label-danger">
+                                                            @Html.DisplayFor(modelItem => item.Despesaestatus)
+                                                        </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="label label-success">
+                                                            @Html.DisplayFor(modelItem => item.Despesaestatus)
+                                                        </span>
+                                                    }
+
+                                                </td>
+
+                                                <td>
+                                                    @if (Model.Estadoss == estadoss.Activo)
+                                                    {
+                                                        <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a>
+
+                                                        <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="messages7" role="tabpanel">
+                            <div class="table-responsive">
+                                <table id="" class="table display dt-responsive task-list-table table-striped table-bordered ">
+                                    <thead>
+                                        <tr>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.timesheetTbs[0].datarealisada)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.timesheetTbs[0].horasrealizadas)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.timesheetTbs[0].descricadashoras)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.timesheetTbs[0].cargo)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.timesheetTbs[0].datacreat)
+                                            </th>
+
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.timesheetTbs)
+                                        {
+                                            <tr>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.datarealisada)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.horasrealizadas)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.descricadashoras)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.cargo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.datacreat)
+                                                </td>
+
+                                                <td>
+                                                    @if (Model.Estadoss == estadoss.Activo)
+                                                    {
+                                                        <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a>
+
+                                                        <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- Task-detail-left end -->
+    } @*actividades diarias*@
+  
+    <div class="col-lg-12">
+
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="icofont icofont-ui-chat m-r-5"></i>  Consultas</h5>
+                <div class="f-right">
+                    @if (Model.Estadoss == estadoss.Activo)
+                    {
+
+                        <a asp-page="/Atendimento/Intrevista" asp-route-id="@Request.Query["id"]" class="btn btn-primary"><i class="icofont icofont-plus"></i> Novo</a>
+                    }
+                </div>
+            </div>
+            <div class="card-block">
+                <ul class="media-list">
+                    @foreach (var item in Model.DetalhesdeActivida)
+                    {
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object img-circle comment-img" src="~/assets/images/1615060.png" alt="Generic placeholder image">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading txt-primary">@item.Iduser <span class="f-12 text-muted m-l-5">@TimeAgo.TimeAgos(item.dataConverca)</span></h6>
+                                <p>@Html.Raw(item.DescricaoActividade)</p>
+                                <div class="m-t-10 m-b-25">
+                                    <span class="f-14"><i class="icofont icofont-curved-down text-danger m-r-10"></i></span>
+                                    <span> <a asp-page="/Atendimento/Intrevista" asp-route-id="@item.Ids" class="m-r-10 f-12"><i class="fa fa-edit"></i></a> </span>
+                                </div>
+                                <hr>
+                            </div>
+                        </li>
+                    }
+                </ul>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+    <!-- .events-content -->
+</div>
+<!-- Modal static-->

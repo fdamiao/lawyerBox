@@ -1,0 +1,110 @@
+﻿@model Cliente_tb
+<div class="modal fade" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="Salvarclinte" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Salvarclinte">Add contact</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="Salvarclinte">
+                    <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="Iduser" hidden="hidden" value="@User.Identity.Name" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TipoPessoa" class="control-label"></label>
+                        <select asp-for="TipoPessoa" class="form-control">
+                            <option value="">--Tipo de cliente --</option>
+                            <option value="Singular">Singular</option>
+                            <option value="Juridica">Juridica</option>
+                        </select>
+                        <span asp-validation-for="TipoPessoa" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Nome" class="control-label"></label>
+                                <input asp-for="Nome" class="form-control" placeholder="Nome" />
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="apelido" class="control-label"></label>
+                                <input asp-for="apelido" class="form-control" placeholder="apelido" />
+                                <span asp-validation-for="apelido" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Ndocumento" class="control-label"></label>
+                                <input asp-for="Ndocumento" class="form-control" placeholder="Doxumento de identidade" />
+                                <span asp-validation-for="Ndocumento" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="Naturalidade" class="control-label"></label>
+                                <input asp-for="Naturalidade" class="form-control" placeholder="Narularidade" />
+                                <span asp-validation-for="Naturalidade" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Contacto" class="control-label"></label>
+                        <input asp-for="Contacto" class="form-control" placeholder="Contacto telefonico" />
+                        <span asp-validation-for="Contacto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Morada" class="control-label"></label>
+                        <input asp-for="Morada" class="form-control" />
+                        <span asp-validation-for="Morada" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="profissao" class="control-label"></label>
+                                <input asp-for="profissao" class="form-control" />
+                                <span asp-validation-for="profissao" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="empresa" class="control-label"></label>
+                                <input asp-for="empresa" class="form-control" />
+                                <span asp-validation-for="empresa" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="nacionalidade" class="control-label"></label>
+                        <input asp-for="nacionalidade" class="form-control" />
+                        <span asp-validation-for="nacionalidade" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="email" class="control-label"></label>
+                        <input asp-for="email" class="form-control" />
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+
+
+                    @*<div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>*@
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-save="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

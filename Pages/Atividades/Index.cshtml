@@ -1,0 +1,78 @@
+﻿@page
+@model WeblawyersBox.Pages.Atividades.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table display">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].idprocesso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].Descricaoactividades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].prioridades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].datacreat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].Iduser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].responsavel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ActividadesProcessos) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idprocesso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricaoactividades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prioridades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datacreat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iduser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.responsavel)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

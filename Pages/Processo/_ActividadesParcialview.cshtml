@@ -1,0 +1,54 @@
+﻿@model  ActividadesProcessos
+@*<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].Descricaoactividades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].prioridades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].status)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ActividadesProcessos[0].responsavel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ActividadesProcessos)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricaoactividades)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prioridades)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.responsavel)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@

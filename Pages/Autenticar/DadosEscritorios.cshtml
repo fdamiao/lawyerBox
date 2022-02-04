@@ -1,0 +1,69 @@
+﻿@page
+@model WeblawyersBox.Pages.Autenticar.DadosEscritoriosModel
+
+@{
+    ViewData["Title"] = "DadosEscritorios";
+}
+
+<h4>Dados do Escritorio</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Escritorio</h5>
+
+            </div>
+            <div class="card-block">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Empresa_tb.Ids" />
+                    <div class="form-group">
+                        <label asp-for="Empresa_tb.NomeEmpresa" class="control-label"></label>
+                        <input asp-for="Empresa_tb.NomeEmpresa" class="form-control" />
+                        <span asp-validation-for="Empresa_tb.NomeEmpresa" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Empresa_tb.ContactoTelefone" class="control-label"></label>
+                        <input asp-for="Empresa_tb.ContactoTelefone" class="form-control" />
+                        <span asp-validation-for="Empresa_tb.ContactoTelefone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Empresa_tb.EmailEmpresa" class="control-label"></label>
+                        <input asp-for="Empresa_tb.EmailEmpresa" class="form-control" />
+                        <span asp-validation-for="Empresa_tb.EmailEmpresa" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Empresa_tb.LocalizacaoEmpresa" class="control-label"></label>
+                        <input asp-for="Empresa_tb.LocalizacaoEmpresa" class="form-control" />
+                        <span asp-validation-for="Empresa_tb.LocalizacaoEmpresa" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+
+
+
+                        <input type="file" asp-for="Photo" id="Photo" multiple aria-label="File browser" accept=".jpeg,.jpg" class="form-control">
+
+                        @*<input asp-for="Input.Photo" type="file" class="custom-file-input form-control" />*@
+
+
+
+                    </div>
+                    <img src="~/Escritorios/@Model.Empresa_tb.NomeEmpresa/@Model.Empresa_tb.LogoTipoEmpresa" class="img-100" alt="." />
+                  
+
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>S
+
+     
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

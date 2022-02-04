@@ -1,0 +1,19 @@
+2021-12-17 15:16:29.0238|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-17 15:16:29.1783|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-17 15:16:29.1842|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-17 15:18:11.4268|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:18:13.1371|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:18:40.8730|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:18:42.4940|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:24:41.8986|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:24:43.5062|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:25:22.9602|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:25:24.5924|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-17 15:58:59.9543|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-17 15:59:00.0424|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-17 15:59:00.0424|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-17 15:59:23.8534|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-17 16:00:49.4425|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-17 16:00:49.5096|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-17 16:00:49.5195|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-17 16:00:55.7938|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18302628917309079570", Request ID "80000013-0007-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.

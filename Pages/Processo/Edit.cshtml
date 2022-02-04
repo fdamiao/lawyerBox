@@ -1,0 +1,81 @@
+﻿@page
+@model WeblawyersBox.Pages.Processo.EditModel
+@using WeblawyersBox.Models
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Processo_tb</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Processo_tb.NProcesso" class="control-label"></label>
+                <input asp-for="Processo_tb.NProcesso" class="form-control" />
+                <span asp-validation-for="Processo_tb.NProcesso" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Processo_tb.TituloProcesso" class="control-label"></label>
+                <input asp-for="Processo_tb.TituloProcesso" class="form-control" />
+                <span asp-validation-for="Processo_tb.TituloProcesso" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Processo_tb.responsavel" class="control-label"></label>
+                <input asp-for="Processo_tb.responsavel" class="form-control" />
+                <span asp-validation-for="Processo_tb.responsavel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Processo_tb.ValordeCausa" class="control-label"></label>
+                <input asp-for="Processo_tb.ValordeCausa" class="form-control" />
+                <span asp-validation-for="Processo_tb.ValordeCausa" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <label asp-for="Processo_tb.Fisico" class="control-label"></label>
+                <input asp-for="Processo_tb.Fisico" class="form-control" />
+                <span asp-validation-for="Processo_tb.Fisico" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Processo_tb.Estado" /> @Html.DisplayNameFor(model => model.Processo_tb.Estado)
+                </label>
+            </div>
+          
+            @*<div class="form-group">
+                <label asp-for="Processo_tb.tipo" class="control-label"></label>
+                <select asp-for="Processo_tb.tipo" asp-items="@Html.GetEnumSelectList<tipo>()" class="form-control"></select>
+                <span asp-validation-for="Processo_tb.tipo" class="text-danger"></span>
+            </div>*@
+            <input type="hidden" asp-for="Processo_tb.Ids" />
+
+            <div class="form-group">
+                <label asp-for="Processo_tb.Iduser" class="control-label" hidden="hidden"></label>
+                <input asp-for="Processo_tb.Iduser" class="form-control" hidden="hidden" />
+                <span asp-validation-for="Processo_tb.Iduser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Processo_tb.Observacao" class="control-label"></label>
+                <textarea asp-for="Processo_tb.Observacao" class="form-control" id="summernote"></textarea>
+                <span asp-validation-for="Processo_tb.Observacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-page="/Processo/index" asp-route-id="@Request.Query["id"]" class="btn btn-default"><i class="fa fa-backward"></i> voltar</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

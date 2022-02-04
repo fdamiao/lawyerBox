@@ -1,0 +1,52 @@
+﻿@page
+@model WeblawyersBox.Pages.PessoasEnvolvidas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+
+    <a asp-page="./Create" asp-route-id="@Request.Query["id"]" class="btn btn-default"><i class="fa fa-user-circle-o"></i> Incluir pessoas</a>
+    @* <a asp-page="Create">Create New</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoas_Envolvidas_tb[0].NomePessoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoas_Envolvidas_tb[0].Posicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoas_Envolvidas_tb[0].Contacto)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pessoas_Envolvidas_tb) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePessoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Posicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacto)
+            </td>
+            
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

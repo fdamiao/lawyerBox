@@ -1,0 +1,115 @@
+﻿@page
+@model WeblawyersBox.Pages.Processo.ProcessosModel
+@using WeblawyersBox.Models
+@{
+    ViewData["Title"] = "Processos";
+}
+
+<h1>Processos</h1>
+
+<hr />
+<div class="row center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>registrar Processo</h5>
+               
+            </div>
+            <div class="card-block ">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                 
+                    <div class="form-group">
+                        <label asp-for="Processo_tb.Objecto" class="control-label"></label>
+                        <input asp-for="Processo_tb.Objecto" class="form-control" />
+                        <span asp-validation-for="Processo_tb.Objecto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Processo_tb.TituloProcesso" class="control-label"></label>
+                        <input asp-for="Processo_tb.TituloProcesso" class="form-control" />
+                        <span asp-validation-for="Processo_tb.TituloProcesso" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Processo_tb.ValordeCausa" class="control-label"></label>
+                                <input asp-for="Processo_tb.ValordeCausa" class="form-control" />
+                                <span asp-validation-for="Processo_tb.ValordeCausa" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Processo_tb.Valorcondenacao" class="control-label"></label>
+                                <input asp-for="Processo_tb.Valorcondenacao" class="form-control" />
+                                <span asp-validation-for="Processo_tb.Valorcondenacao" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Processo_tb.Fisico" class="control-label"></label>
+                                <input asp-for="Processo_tb.Fisico" class="form-control" />
+                                <span asp-validation-for="Processo_tb.Fisico" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Processo_tb.NProcesso" class="control-label"></label>
+                                <input asp-for="Processo_tb.NProcesso" class="form-control" />
+                                <span asp-validation-for="Processo_tb.NProcesso" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                  
+
+
+               
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Processo_tb.instacia" class="control-label"></label>
+                                <select asp-for="Processo_tb.instacia" class="form-control" asp-items="@Html.GetEnumSelectList<instacia>()"></select>
+                                <span asp-validation-for="Processo_tb.instacia" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Processo_tb.Categorias" class="control-label"></label>
+                                <select asp-for="Processo_tb.Categorias" class="form-control" asp-items="@Html.GetEnumSelectList<locais>()"></select>
+                                <span asp-validation-for="Processo_tb.Categorias" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="Processo_tb.responsavel" class="control-label"></label>
+                        <input asp-for="Processo_tb.responsavel" class="form-control" value="@User.Identity.Name" />
+                        <span asp-validation-for="Processo_tb.responsavel" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Processo_tb.Observacao" class="control-label"></label>
+                        <textarea asp-for="Processo_tb.Observacao" class="form-control" id="summernote" ></textarea>
+                        <span asp-validation-for="Processo_tb.Observacao" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        @*<input type="submit" value="Salvar" class="btn btn-primary" />*@
+                        <button type="submit" class="btn btn-primary"> <i class="fa fa-save"></i> Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+        <div>
+            <a asp-page="Index">Back to List</a>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

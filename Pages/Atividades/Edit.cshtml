@@ -1,0 +1,72 @@
+﻿@page
+@model WeblawyersBox.Pages.Atividades.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="card comment-block">
+            <div class="card-header">
+                <h4> Editar Actividades Processos</h4>
+            </div>
+            <div class="card-block">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.idprocesso" class="control-label" hidden="hidden"></label>
+                        <input asp-for="ActividadesProcessos.idprocesso" class="form-control" hidden="hidden" value="@Request.Query["id"]" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.data" class="control-label"></label>
+                        <input asp-for="ActividadesProcessos.data" class="form-control" />
+                        <span asp-validation-for="ActividadesProcessos.data" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.prioridades" class="control-label"></label>
+                        <select asp-for="ActividadesProcessos.prioridades" class="form-control" asp-items="@Html.GetEnumSelectList<prioridade>()"></select>
+                        <span asp-validation-for="ActividadesProcessos.prioridades" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.status" class="control-label"></label>
+                        <select asp-for="ActividadesProcessos.status" class="form-control" asp-items="@Html.GetEnumSelectList<estado>()"></select>
+                        <span asp-validation-for="ActividadesProcessos.status" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="ActividadesProcessos.Ids" />
+
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.Iduser" class="control-label" hidden="hidden"></label>
+                        <input asp-for="ActividadesProcessos.Iduser" class="form-control" hidden="hidden" />
+                        <span asp-validation-for="ActividadesProcessos.Iduser" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.Descricaoactividades" class="control-label"></label>
+                        <textarea asp-for="ActividadesProcessos.Descricaoactividades" class="form-control"></textarea>
+                        <span asp-validation-for="ActividadesProcessos.Descricaoactividades" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ActividadesProcessos.responsavel" class="control-label"></label>
+                        <input asp-for="ActividadesProcessos.responsavel" class="form-control" />
+                        <span asp-validation-for="ActividadesProcessos.responsavel" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" value="Create" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                        <a asp-page="/Processo/Details" asp-route-id="@Request.Query["id"]" class="btn btn-secondary"><i class="fa fa-backward"></i> voltar</a>
+
+                    </div>
+                </form>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+     
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

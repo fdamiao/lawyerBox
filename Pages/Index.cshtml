@@ -1,0 +1,463 @@
+﻿@page
+
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Painel Inicial";
+}
+<!-- Content Header (Page header) "{handler?}"-->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h3 class="m-0"><i class="fa fa-home"></i> Escritorio - @Model.mpresa</h3>
+            </div><!-- /.col -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<div class="alert alert-warning background-warning">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <i class="icofont icofont-close-line-circled text-white"></i>
+    </button>
+    <strong>O seu periodo de avaliação termina em </strong> Dias
+</div>
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-header-text">
+            <i class="fa fa-home"></i> Escritorio - @Model.mpresa
+        </h4>
+        <div class="f-right">
+            <a asp-page="./Cliente/Create" class="btn btn-primary waves-float"><i class="fa fa-plus"></i> Novo cliente</a>
+        </div>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="text-center  m-t-20">
+
+                    <img class="img-100 img-circle" src="~/Escritorios/@Model.logomarca" alt="Logo" />
+
+
+                </div>
+                <h2 class="text-center">Bemvindo @User.Identity.Name !</h2>
+            </div>
+        </div>
+        <div class="row seacrh-header">
+
+            <div class="col-lg-4 offset-lg-4 col-sm-6 offset-sm-1 col-xs-12">
+                <form method="post" asp-page-handler="Submit">
+                    <div class="input-group input-group-button input-group-warning">
+                        <input type="text" id="txtBuscar" class="form-control" required placeholder="Encontre o processo , caso ou cliente...">
+                        <input type="hidden" id="procesiID" name="processoId" />
+                        <div id="match-list"></div>
+                        <span class="input-group-addon" id="basic-addon1">
+                            <button type="submit" asp-page-handler="Submit" class="btn btn-warning"><i class="fa fa-search"></i> Buscar</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-xl-3">
+        <div class="card client-blocks dark-primary-border">
+            <div class="card-block">
+                <h5>Clientes</h5>
+                <ul>
+                    <li>
+                        <i class="icofont icofont-ui-user-group "></i>
+                    </li>
+                    <li class="text-right">
+                        @ViewBag.nclinte
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="card client-blocks dark-primary-border">
+            <div class="card-block">
+                <h5>Processo abertos</h5>
+                <ul>
+                    <li>
+                        <i class="icofont icofont-document-folder"></i>
+                    </li>
+                    <li class="text-right">
+                        @ViewBag.nprocess
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="card client-blocks dark-primary-border">
+            <div class="card-block">
+                <h5>Casos abertos</h5>
+                <ul>
+                    <li>
+                        <i class="icofont icofont-scales"></i>
+                    </li>
+                    <li class="text-right">
+                        @ViewBag.npcasos
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="card client-blocks dark-primary-border">
+            <div class="card-block">
+                <h5>Total espaco usado</h5>
+                <ul>
+                    <li>
+                        <i class="icofont icofont-file"></i>
+                    </li>
+                    <li class="text-right">
+                        @ViewBag.TotalUsado GB
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+
+        <div class="card client-blocks">
+            <div class="card-header">
+                <i class="fa fa-times-circle"></i> Eventos
+
+            </div>
+            <div class="card-block">
+                <div class=" table-responsive">
+                    <table id="" class="table display dt-responsive task-list-table table-striped table-bordered ">
+                        <thead>
+                            <tr>
+                                <th>
+
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].DataMarcada)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].Estado)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].prioridade)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].evento)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].LocaldaAudiencia)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].descricaevento)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Audiencia_tab[0].responsavel)
+                                </th>
+                                @*<th>
+                                        @Html.DisplayNameFor(model => model.Audiencia_tab[0].Datatermino)
+                                    </th>*@
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Audiencia_tab)
+                            {
+                                <tr>
+                                    <td>
+                                        @if (item.DataMarcada < DateTime.Now && item.Estado == estado.Agendado)
+                                        {
+                                            <label class="label label-danger">  @Html.DisplayFor(modelItem => item.DataMarcada)</label>
+                                        }
+                                        else
+                                        {
+                                            <label class="label label-primary">  @Html.DisplayFor(modelItem => item.DataMarcada)</label>
+                                        }
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Estado)
+                                    </td>
+                                    <td>
+                                        @if (item.prioridade.Equals(prioridade.Critica))
+                                        {
+                                            <span class="label label-danger">
+                                                @Html.DisplayFor(modelItem => item.prioridade)
+                                            </span>
+                                        }
+                                        @if (item.prioridade.Equals(prioridade.Baixa))
+                                        {
+                                            <span class="label label-primary">
+                                                @Html.DisplayFor(modelItem => item.prioridade)
+                                            </span>
+                                        }
+                                        @if (item.prioridade.Equals(prioridade.Alta))
+                                        {
+                                            <span class="label label-warning">
+                                                @Html.DisplayFor(modelItem => item.prioridade)
+                                            </span>
+                                        }
+                                        @if (item.prioridade.Equals(prioridade.Media))
+                                        {
+                                            <span class="label label-info">
+                                                @Html.DisplayFor(modelItem => item.prioridade)
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.evento)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LocaldaAudiencia)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.descricaevento)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.responsavel)
+                                    </td>
+                                    @*<td>
+                                            @Html.DisplayFor(modelItem => item.Datatermino)
+                                        </td>*@
+                                    <td>
+                                        <a asp-page="./eventos/CriarEvento" asp-route-id="@item.Ids">Edit</a> |
+
+                                        <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" col-lg-6">
+        <div class="card">
+            <div class="card-header"> <div><h2><i class="fa fa-balance-scale"></i> Actividades</h2></div></div>
+            <div class="card-block">
+                <div class=" table-responsive">
+                    <table id="" class="table display dt-responsive task-list-table table-striped table-bordered ">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.actividadesProcessos[0].Descricaoactividades)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.actividadesProcessos[0].data)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.actividadesProcessos[0].prioridades)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.actividadesProcessos[0].status)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.actividadesProcessos[0].responsavel)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.actividadesProcessos)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Descricaoactividades)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.data)
+                                    </td>
+                                    <td>
+                                        @if (item.prioridades.Equals(prioridade.Critica))
+                                        {
+                                            <span class="label label-danger">
+                                                @Html.DisplayFor(modelItem => item.prioridades)
+                                            </span>
+                                        }
+                                        @if (item.prioridades.Equals(prioridade.Baixa))
+                                        {
+                                            <span class="label label-primary">
+                                                @Html.DisplayFor(modelItem => item.prioridades)
+                                            </span>
+                                        }
+                                        @if (item.prioridades.Equals(prioridade.Alta))
+                                        {
+                                            <span class="label label-warning">
+                                                @Html.DisplayFor(modelItem => item.prioridades)
+                                            </span>
+                                        }
+                                        @if (item.prioridades.Equals(prioridade.Media))
+                                        {
+                                            <span class="label label-info">
+                                                @Html.DisplayFor(modelItem => item.prioridades)
+                                            </span>
+                                        }
+
+                                    </td>
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.status)
+                                    </td>
+
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.responsavel)
+
+                                    </td>
+                                    <td>
+                                        <a asp-page="/Atividades/Edit" asp-route-id="@item.Ids"><i class="fa fa-edit"></i></a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <div class="card-block">
+
+        <div id='calendar'></div>
+    </div>
+</div>
+
+<div id="calendarModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @* <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>*@
+                <h4 id="modalTitle" class="modal-title"></h4>
+            </div>
+            <div id="modalBody" class="modal-body"> </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialVeiw: 'dayGridMonth',
+            locale: 'pt',
+
+            headerToolbar: {
+                left: 'prev, next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true,
+            selectable: true,
+            events: function (fetchInfo, successCallback, failureCallback) {
+
+                jQuery.ajax({
+                    url: "Index?handler=Calendario",
+                    type: "GET",
+                    //contentType: "application/json; charset=utf-8",
+                    success: function (res) {
+                        var events = [];
+
+                        res.forEach(function (data) {
+                            events.push({
+                                title: data.evento,
+                                description: data.descricaevento,
+                                start: moment(data.dataMarcada).format('YYYY-MM-DD'),
+                                end: moment(data.datatermino).format('YYYY-MM-DD'),
+                                backgroundColor: "#9501fc",
+                                borderColor: "#fc0101"
+                            });
+                        });
+                        successCallback(events);
+                    },
+                });
+            },
+
+            eventClick: function (info, jsEvent, view) {
+
+
+                $('#modalTitle').html(info.event.title);
+                $('#modalBody').html(info.event.extendedProps.description);
+                $('#eventUrl').attr('href', info.event.url);
+                $('#calendarModal').modal();
+
+            },
+            eventRender: function (event, element) {
+
+                element.qtip(
+                    {
+
+                        content: event.descricaevento
+                    });
+            },
+
+            editable: false
+        });
+        calendar.render();
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        debugger
+        $("#txtBuscar").autocomplete({
+
+            source: function (request, response) {
+                debugger
+                $.ajax({
+                    url: '/Index?handler=AutoComplete',
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("XSRF-TOKEN",
+                            $('input:hidden[name="__RequestVerificationToken"]').val());
+                    },
+                    data: { "prefix": request.term },
+                    type: "POST",
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return item;
+                        }))
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                    },
+                    failure: function (response) {
+                        alert(response.responseText);
+                    }
+                });
+            },
+            select: function (e, i) {
+                debugger
+                $("#procesiID").val(i.item.val);
+
+            },
+            minLength: 1
+        });
+    });
+</script>

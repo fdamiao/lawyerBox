@@ -1,0 +1,118 @@
+﻿@page
+@model WeblawyersBox.Pages.Cliente.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+    <div id="modal-placeholder"></div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5> <i class="fa fa-user"></i> Clientes</h5>
+                    <div class="f-right">
+                        <button type="button" class="btn btn-primary waves-float" data-target="#default-Modal" data-toggle="ajax-modal" data-url="@Url.Page("Index", "NovoCliente")"><i class="fa fa-plus"></i> Novo cliente</button>
+                        @*<button type="button" data-toggle="modal" data-target="#default-Modal"><i class="fa fa-list"></i> Editar</button>**@
+
+                    </div>
+
+                </div>
+                <div class="card-block">
+                    <div class=" table-responsive">
+                        <table  class="table table-striped table-valign-middle display">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].Nome)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].Ndocumento)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].Naturalidade)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].Contacto)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].Morada)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].TipoPessoa)
+                                    </th>
+                                    @*<th>
+                                    @Html.DisplayNameFor(model => model.Cliente_tb[0].profissao)
+                                </th>*@
+                                    @*<th>
+                                    @Html.DisplayNameFor(model => model.Cliente_tb[0].empresa)
+                                </th>*@
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].nacionalidade)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Cliente_tb[0].email)
+                                    </th>
+
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Cliente_tb)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Nome)  @Html.DisplayFor(modelItem => item.apelido)
+                                        </td>
+                                        @*<td>
+                                        @Html.DisplayFor(modelItem => item.apelido)
+                                    </td>*@
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Ndocumento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Naturalidade)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contacto)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Morada)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TipoPessoa)
+                                        </td>
+                                        @*<td>
+                                        @Html.DisplayFor(modelItem => item.profissao)
+                                    </td>*@
+                                        @*<td>
+                                        @Html.DisplayFor(modelItem => item.empresa)
+                                    </td>*@
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.nacionalidade)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.email)
+                                        </td>
+
+                                        <td>
+                                            <a asp-page="./Edit" asp-route-id="@item.Ids"><i class="fa fa-edit fa-2x"></i></a>  |
+                                            <a asp-page="/Processo/index" asp-route-id="@item.Ids"><i class="fa fa-folder-open fa-2x"></i> </a> |
+
+
+                                            <a asp-page="./Delete" asp-route-id="@item.Ids" class="text-danger"><i class="fa fa-trash fa-2x"></i></a>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

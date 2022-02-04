@@ -1,0 +1,90 @@
+﻿@page
+@model WeblawyersBox.Pages.eventos.CriarEventosModel
+
+@{
+    ViewData["Title"] = "CriarEventos";
+}
+
+
+<h3><i class="fa fa-archive"></i>  @Html.DisplayFor(model => model.Processo_Tb.tipo)- @Html.DisplayFor(model => model.Processo_Tb.TituloProcesso)</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <div class="card comment-block">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-clock-time m-r-5"></i>  Eventos</h5>
+
+            </div>
+            <div class="card-block">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Audiencia_tab.DataMarcada" class="control-label"></label>
+                                <input asp-for="Audiencia_tab.DataMarcada" class="form-control" />
+                                <span asp-validation-for="Audiencia_tab.DataMarcada" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Audiencia_tab.Datatermino" class="control-label"></label>
+                                <input asp-for="Audiencia_tab.Datatermino" class="form-control" />
+                                <span asp-validation-for="Audiencia_tab.Datatermino" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label asp-for="Audiencia_tab.evento" class="control-label"></label>
+                        <input asp-for="Audiencia_tab.evento" class="form-control" placeholder="De que evento se trata?" />
+                        <span asp-validation-for="Audiencia_tab.evento" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Audiencia_tab.LocaldaAudiencia" class="control-label"></label>
+                        <input asp-for="Audiencia_tab.LocaldaAudiencia" class="form-control" placeholder="Onde vai decorrer o envento?" />
+                        <span asp-validation-for="Audiencia_tab.LocaldaAudiencia" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Audiencia_tab.prioridade" class="control-label"></label>
+                        <select asp-for="Audiencia_tab.prioridade" class="form-control" asp-items="@Html.GetEnumSelectList<prioridade>()"></select>
+                        <span asp-validation-for="Audiencia_tab.prioridade" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Audiencia_tab.descricaevento" class="control-label"></label>
+                        <textarea asp-for="Audiencia_tab.descricaevento" class="form-control" placeholder="Fale um pouco do evento"></textarea>
+                        <span asp-validation-for="Audiencia_tab.descricaevento" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label asp-for="Audiencia_tab.responsavel" class="control-label"></label>
+                        <input asp-for="Audiencia_tab.responsavel" class="form-control" value="@User.Identity.Name" />
+                        <span asp-validation-for="Audiencia_tab.responsavel" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Audiencia_tab.cores" class="control-label"></label>
+                        <input asp-for="Audiencia_tab.cores" class="form-control" type="color" />
+                        <span asp-validation-for="Audiencia_tab.cores" class="text-danger"></span>
+                    </div>
+                 
+                    <div class="form-group">
+                        <button type="submit" value="Create" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                        <a asp-page="/Processo/Details" asp-route-id="@Request.Query["id"]" class="btn btn-secondary"><i class="fa fa-backward"></i> voltar</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

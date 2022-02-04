@@ -1,0 +1,7 @@
+2022-01-05 12:31:16.1182|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-05 12:31:16.2243|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-05 12:31:16.2328|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-05 12:51:39.4684|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-05 12:51:39.4684|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-05 13:28:47.0680|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-05 13:28:47.0734|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial

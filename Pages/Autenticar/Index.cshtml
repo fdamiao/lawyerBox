@@ -1,0 +1,151 @@
+﻿@page
+@model WeblawyersBox.Pages.Autenticar.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Lawyer Box-Bem vindo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="FLDservice-sistema de gestao de escritorios de advogados">
+    <meta name="keywords" content=",Advogados,Adminstrativo,honorarios,timesheet,escritorios">
+    <meta name="author" content="Franco lucky Damiao">
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/assets/images/law.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+   @* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*@
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/icofont/css/icofont.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <!--color css-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/color/color-1.css" id="color" />
+</head>
+
+<body class="horizontal-static">
+    <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Authentication card start -->
+                    <div class="login-card card-block auth-body">
+                        <form id="account" method="post">
+                            <div class="text-center">
+                                <img src="~/images/LAWYERBOX.png"  alt="logo.png">
+                            </div>
+
+                            <div class="auth-box slideInDown">
+                                <div class="row m-b-20">
+                                    <div class="col-md-5">
+                                        <h3 class="text-center txt-primary">Sign In</h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a asp-page="./Cadastro" asp-route-returnUrl="@Model.ReturnUrl" class="text-inverse m-t-25 text-left">Register as a new user</a>
+
+                                    </div>
+                                </div>
+                                @*<p class="text-inverse b-b-default text-left p-b-5">Sign in easily with your social account:</p>
+                                <div class="row m-b-20">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-facebook m-b-20"><i class="icofont icofont-social-facebook"></i>Sign in with facebook</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-twitter m-b-20"><i class="icofont icofont-social-twitter"></i>Sign in with twitter</button>
+                                    </div>
+                                </div>*@
+                                <p class="text-inverse b-b-default text-left p-b-5">Dados da conta</p>
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="form-group">
+                                    @*<label asp-for="Input.Email"></label>*@
+                                    <input asp-for="Input.Email" class="form-control" placeholder="Informe o email" />
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    @*<label asp-for="Input.Password"></label>*@
+                                    <input asp-for="Input.Password" class="form-control" placeholder="informe a palavra passe" />
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                </div>
+                                <div class="row m-t-25 text-left">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="checkbox fade-in-primary">
+                                            <label>
+                                                <span class="text-inverse">Remember me</span>
+                                                <input asp-for="Input.RememberMe" class="text-inverse" />
+                                                @*<span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>*@
+                                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+
+                                               </label>
+                                        </div>
+                                        @*<div class="checkbox-fade fade-in-primary">
+                    <label>
+                        <input type="checkbox" value="">
+                        <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
+                        <span class="text-inverse">Remember me</span>
+                    </label>
+                </div>*@
+                                    </div>
+                                    <div class="col-sm-6 col-xs-12 forgot-phone text-right">
+                                        <a href="./RecoperarSenha" class="text-right f-w-600 text-inverse"> Esqueceu palavra pass?</a>
+                                    </div>
+                                </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Acessar</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="card-footer"> -->
+                                <!-- <div class="col-sm-12 col-xs-12 text-center">
+        <span class="text-muted">Don't have an account?</span>
+        <a href="register2.html" class="f-w-600 p-l-5">Sign up Now</a>
+    </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </form>
+                        <!-- end of form -->
+                    </div>
+                    <!-- Authentication card end -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+
+    <script type="text/javascript" src="~/lib/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="~/lib/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="~/lib/bower_components/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+    <!-- i18next.min.js -->
+    <script type="text/javascript" src="~/lib/bower_components/i18next/i18next.min.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="text/javascript" src="~/lib/bower_components/jquery-i18next/jquery-i18next.min.js"></script>
+     @*Custom js 
+    <script type="text/javascript" src="~/assets/js/script.js"></script>
+    color js
+    <script type="text/javascript" src="~/assets/js/common-pages.js"></script>*@
+</body>
+
+
+<!-- Mirrored from html.phoenixcoded.net/flatable/ltr/horizontal-static/auth-sign-in-social.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Oct 2021 21:35:57 GMT -->
+</html>
+

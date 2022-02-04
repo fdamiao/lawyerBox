@@ -1,0 +1,69 @@
+﻿@page
+@model WeblawyersBox.Pages.TimeSheet.timesheetModel
+
+@{
+    ViewData["Title"] = "timesheet";
+}
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="card ">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-comment m-r-5"></i>  @Html.DisplayFor(model => model.Processo_Tb.tipo)- @Html.DisplayFor(model => model.Processo_Tb.TituloProcesso)</h5>
+            </div>
+            <div class="card-block">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="timesheetTbs.datarealisada" class="control-label"></label>
+                                <input asp-for="timesheetTbs.datarealisada" class="form-control" type="date" />
+                                <span asp-validation-for="timesheetTbs.datarealisada" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label asp-for="timesheetTbs.horasrealizadas" class="control-label"></label>
+                                <input asp-for="timesheetTbs.horasrealizadas" class="form-control" type="number" />
+                                <span asp-validation-for="timesheetTbs.horasrealizadas" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label asp-for="timesheetTbs.cargo" class="control-label"></label>
+                        <select asp-for="timesheetTbs.cargo" class="form-control" asp-items="@Html.GetEnumSelectList<cargo>()"></select>
+                        <span asp-validation-for="timesheetTbs.cargo" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="timesheetTbs.descricadashoras" class="control-label"></label>
+                        <textarea asp-for="timesheetTbs.descricadashoras" class="form-control"></textarea>
+                        <span asp-validation-for="timesheetTbs.descricadashoras" class="text-danger"></span>
+                    </div>
+
+                    <input asp-for="timesheetTbs. Iduser" hidden="hidden" value="@User.Identity.Name" />
+                    <div class="form-group">
+                        <label asp-for="timesheetTbs.idprocesso" class="control-label" hidden="hidden"></label>
+                        <input asp-for="timesheetTbs.idprocesso" class="form-control" hidden="hidden" value="@Request.Query["id"]" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" value="Create" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                        <a asp-page="/Processo/Details" asp-route-id="@Request.Query["id"]" class="btn btn-secondary"><i class="fa fa-backward"></i> voltar</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+     
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

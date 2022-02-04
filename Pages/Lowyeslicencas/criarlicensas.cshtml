@@ -1,0 +1,162 @@
+﻿@page
+@model WeblawyersBox.Pages.Lowyeslicencas.criarlicensasModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header"> Criar Licenças  <a asp-page="criarlicensas">Nova licença</a></div>
+            <div class="card-block">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="licensastbs.idlices" />
+                    <div class="form-group">
+                        <label asp-for="licensastbs.tipodelicass" class="control-label"></label>
+                        <select asp-for="licensastbs.tipodelicass" class="form-control" asp-items="@Html.GetEnumSelectList< tipodelicenca>()"></select>
+                        <span asp-validation-for="licensastbs.tipodelicass" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="licensastbs.usuarios" class="control-label"></label>
+                        <input asp-for="licensastbs.usuarios" class="form-control" />
+                        <span asp-validation-for="licensastbs.usuarios" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="licensastbs.processo" class="control-label"></label>
+                        <input asp-for="licensastbs.processo" class="form-control" />
+                        <span asp-validation-for="licensastbs.processo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="licensastbs.GB" class="control-label"></label>
+                        <input asp-for="licensastbs.GB" class="form-control" />
+                        <span asp-validation-for="licensastbs.GB" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="licensastbs.preco" class="control-label"></label>
+                        <input asp-for="licensastbs.preco" class="form-control" />
+                        <span asp-validation-for="licensastbs.preco" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="licensastbs.honorarios" /> @Html.DisplayNameFor(model => model.licensastbs.honorarios)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="licensastbs.timeshe" /> @Html.DisplayNameFor(model => model.licensastbs.timeshe)
+                        </label>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="licensastbs.despesa" /> @Html.DisplayNameFor(model => model.licensastbs.despesa)
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="licensastbs.descricao" class="control-label"></label>
+                        <textarea asp-for="licensastbs.descricao" class="form-control"></textarea>
+                        <span asp-validation-for="licensastbs.descricao" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header"> Lista Licenças</div>
+            <div class="card-block">
+                <table class="table display">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].tipodelicass)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].usuarios)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].honorarios)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].despesa)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].timeshe)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].GB)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].preco)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].processo)
+                            </th>
+                          
+                            <th>
+                                @Html.DisplayNameFor(model => model.Listlicensastbs[0].descricao)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Listlicensastbs)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tipodelicass)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.usuarios)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.honorarios)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.despesa)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.timeshe)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.GB)
+                            </td> 
+                            <td>
+                                @Html.DisplayFor(modelItem => item.preco)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.processo)
+                            </td>
+                           
+                            <td>
+                                @Html.DisplayFor(modelItem => item.descricao)
+                            </td>
+                            <td>
+                                <a asp-page="./criarlicensas" asp-route-id="@item.idlices"><i class="fa fa-edit"></i></a> |
+                               
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div>
+            <a asp-page="Index">Back to List</a>
+        </div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

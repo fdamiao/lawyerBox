@@ -1,0 +1,71 @@
+﻿@page
+@model WeblawyersBox.Pages.PessoasEnvolvidas.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Novos participantes</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text"><i class="icofont icofont-attachment"></i> participantes </h5>
+            </div>
+            <div class="card-block ">
+
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                  
+                   
+                    <div class="form-group">
+                        <label asp-for="Pessoas_Envolvidas_tb.NomePessoa" class="control-label"></label>
+                        <input asp-for="Pessoas_Envolvidas_tb.NomePessoa" class="form-control" />
+                        <span asp-validation-for="Pessoas_Envolvidas_tb.NomePessoa" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Pessoas_Envolvidas_tb.Posicao" class="control-label"></label>
+                        <select asp-for="Pessoas_Envolvidas_tb.Posicao" class="form-control">
+                            <option value="">--Posicao --</option>
+                            <option value="Acusador">Singular</option>
+                            <option value="Advogado">Advogado</option>
+                            <option value="Agravado">Agravado</option>
+                            <option value="Agravante">Agravante</option>
+                            <option value="Arduido">Arduido</option>
+                            <option value="Autor">Autor</option>
+                            <option value="Juiz">Juiz</option>
+                            <option value="Reclamado">Reclamado</option>
+                            <option value="Reclamante">Reclamante</option>
+                            <option value="Recorrente">Recorrente</option>
+                            <option value="Recorrido">Recorrido</option>
+                            <option value="Reu">Reu</option>
+                            <option value="Terceiro">Terceiro</option>
+                            <option value="Testemunho/a">Testemunho/a</option>
+                        </select>
+                        <span asp-validation-for="Pessoas_Envolvidas_tb.Posicao" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Pessoas_Envolvidas_tb.Contacto" class="control-label"></label>
+                        <input asp-for="Pessoas_Envolvidas_tb.Contacto" class="form-control" />
+                        <span asp-validation-for="Pessoas_Envolvidas_tb.Contacto" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" value="Create" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                        <a asp-page="/Processo/Details" asp-route-id="@Request.Query["id"]" class="btn btn-secondary"><i class="fa fa-backward"></i> voltar</a>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+      
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

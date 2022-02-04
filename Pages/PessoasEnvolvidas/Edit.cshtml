@@ -1,0 +1,70 @@
+﻿@page
+@model WeblawyersBox.Pages.PessoasEnvolvidas.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Pessoas_Envolvidas_tb</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Pessoas_Envolvidas_tb.Iduser" hidden="hidden" value="@User.Identity.Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Pessoas_Envolvidas_tb.idProcesso" hidden="hidden" class="control-label"></label>
+                <input asp-for="Pessoas_Envolvidas_tb.idProcesso" class="form-control" hidden="hidden" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Pessoas_Envolvidas_tb.NomePessoa" class="control-label"></label>
+                <input asp-for="Pessoas_Envolvidas_tb.NomePessoa" class="form-control" />
+                <span asp-validation-for="Pessoas_Envolvidas_tb.NomePessoa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pessoas_Envolvidas_tb.Posicao" class="control-label"></label>
+                <select asp-for="Pessoas_Envolvidas_tb.Posicao" class="form-control">
+                    <option value="">--Posicao --</option>
+                    <option value="Acusador">Singular</option>
+                    <option value="Advogado">Advogado</option>
+                    <option value="Agravado">Agravado</option>
+                    <option value="Agravante">Agravante</option>
+                    <option value="Arduido">Arduido</option>
+                    <option value="Autor">Autor</option>
+                    <option value="Juiz">Juiz</option>
+                    <option value="Reclamado">Reclamado</option>
+                    <option value="Reclamante">Reclamante</option>
+                    <option value="Recorrente">Recorrente</option>
+                    <option value="Recorrido">Recorrido</option>
+                    <option value="Reu">Reu</option>
+                    <option value="Terceiro">Terceiro</option>
+                    <option value="Testemunho/a">Testemunho/a</option>
+                </select>
+                <span asp-validation-for="Pessoas_Envolvidas_tb.Posicao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pessoas_Envolvidas_tb.Contacto" class="control-label"></label>
+                <input asp-for="Pessoas_Envolvidas_tb.Contacto" class="form-control" />
+                <span asp-validation-for="Pessoas_Envolvidas_tb.Contacto" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Pessoas_Envolvidas_tb.Ids" />
+           
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

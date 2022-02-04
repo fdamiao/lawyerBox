@@ -1,0 +1,105 @@
+2022-01-30 09:30:27.1189|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 09:30:27.4142|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 09:30:27.4224|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 09:31:17.8042|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user 3d05930e-2c2c-4654-9903-08d9dc3d5fcf.
+2022-01-30 09:31:17.8042|WARN|Microsoft.AspNetCore.Identity.SignInManager|User 3d05930e-2c2c-4654-9903-08d9dc3d5fcf failed to provide the correct password.
+2022-01-30 09:35:02.9098|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-30 09:35:02.9098|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-30 09:43:54.6638|INFO|WeblawyersBox.Pages.eventos.CriarEventosModel|Criar eventos com sucessomoradia
+2022-01-30 09:48:22.8176|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-30 09:48:22.8176|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-30 10:37:12.9859|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 10:37:13.0321|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 10:37:13.0321|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 10:37:23.8033|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-30 10:37:23.8033|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-30 14:18:36.7564|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 14:18:36.9059|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 14:18:36.9059|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 14:21:30.1809|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 14:21:30.2554|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 14:21:30.2648|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 14:24:24.5016|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 14:24:24.5897|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 14:24:24.6056|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 14:25:24.8731|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2022-01-30 14:25:25.0260|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2022-01-30 14:39:41.1926|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 14:39:41.2828|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 14:39:41.2828|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 14:41:14.2889|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'weblawyersDB' on server 'DESKTOP-SD2VNE6'.
+2022-01-30 14:41:15.2166|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'WeblawyersBox.Data.ApplicationDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+ ---> System.ComponentModel.Win32Exception (233): No process is on the other end of the pipe.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransactionAsync(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:11f5900e-65c7-4467-872f-8bf82234aba6
+Error Number:233,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-01-30 14:46:30.9259|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 14:46:31.0151|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 14:46:31.0459|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 17:19:37.9907|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 17:19:39.6541|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 17:19:39.6697|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 17:23:14.4427|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2022-01-30 17:23:17.8735|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2022-01-30 17:26:14.0339|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 17:26:14.1074|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 17:26:14.1183|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 17:27:53.0105|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) password validation failed: PasswordRequiresUpper.
+2022-01-30 17:28:03.1133|WARN|Microsoft.AspNetCore.Identity.UserManager|GetSecurityStampAsync for user (null) failed because stamp was null.
+2022-01-30 17:30:06.6132|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 17:30:06.6995|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 17:30:06.7092|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 17:54:23.7921|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 17:54:23.9777|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 17:54:23.9909|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 21:23:10.8449|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 21:23:11.0995|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 21:23:11.1101|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 21:53:09.4676|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 21:53:09.5418|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 21:53:09.5535|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 21:55:54.8340|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-30 21:55:54.8340|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-30 21:56:27.9351|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-30 21:56:27.9410|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-30 21:57:58.1379|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-30 21:57:58.2260|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-30 21:57:58.2366|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-30 21:58:04.0561|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-30 21:58:04.0610|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial

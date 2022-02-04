@@ -1,0 +1,164 @@
+﻿@page
+@model WeblawyersBox.Pages.Processo.IndexModel
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1><i class="fa fa-user"></i>  @Html.DisplayFor(model => model.Cliente_Tbs.Nome)</h1>
+
+<div>
+    <h4>Contacto: @Html.DisplayFor(model => model.Cliente_Tbs.Contacto)</h4>
+    <hr />
+</div>*@
+@*<input asp-for="idcli" id="idcli" value="@Request.Query["id"]" />*@
+<div id="modal-placeholder"></div>
+@*<button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-url="@Url.Page("Index", "Novoprocessoparcial")">
+        Novo Processo
+    </button>*@
+<p>
+
+</p>
+
+<div class="row">
+    <div class="col lg 12">
+        <div class="card">
+            <div class="card-header">
+                <h5><i class="fa fa-user"></i>  @Model.Cliente_Tbs.buscarnomes()</h5>
+                <div class="f-right">
+                    <div class="btn-group dropdown-split-primary">
+                        <button type="button" class="btn btn-primary"><i class="icofont icofont-plus"></i>Adicionar</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split waves-effect waves-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle primary</span>
+                        </button>
+                        <div class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <a asp-page="./Processos" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect"><i class="ti ti-agenda "></i> Novo processo</a>
+                            <a asp-page="./Casos" asp-route-id="@Request.Query["id"]" class="dropdown-item waves-light waves-effect"><i class="fa fa-balance-scale "></i> Novo Caso</a>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-block tab-icon">
+
+                <!-- <h6 class="sub-title">Tab With Icon</h6> -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs md-tabs " role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#home7" role="tab"><i class="ti ti-agenda"></i> Processos <label class="badge badge-primary">@ViewBag.TotalHprocesso</label></a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#profile7" role="tab"><i class="fa fa-balance-scale"></i> Casos <label class="badge badge-info">@ViewBag.Totaldcaso</label></a>
+                        <div class="slide"></div>
+                    </li>
+
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content card-block">
+                    <div class="tab-pane active" id="home7" role="tabpanel">
+                        <div class="row">
+                            @foreach (var item in Model.Processo_tb)
+                            {
+                                <div class="col-lg-4">
+                                    <div class="card card-border-primary">
+                                        <div class="card-header">
+                                            <h5>
+
+                                                @Html.DisplayFor(modelItem => item.responsavel)
+                                            </h5>
+                                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                                            <div class="dropdown-secondary dropdown f-right">
+                                                <span class="label label-info">  @Html.DisplayFor(modelItem => item.Estados)</span>
+                                                <!-- end of dropdown menu -->
+                                              
+
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <ul class="list list-unstyled">
+                                                        <li>Por: @Html.DisplayFor(modelItem => item.Iduser)</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.TituloProcesso)</li>
+                                                        <li>@Html.Raw(item.Objecto)</li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="task-list-table">
+                                                <p class="task-due"><strong> Data : </strong><strong class="label label-success">@Html.DisplayFor(modelItem => item.datacreat)</strong></p>
+                                            </div>
+                                            <div class="task-board m-0">
+                                                <a asp-page="./Details" asp-route-id="@item.Ids" class="btn btn-info btn-mini b-none"><i class="icofont icofont-eye-alt m-0"></i></a>
+                                                <!-- end of dropdown-secondary -->
+                                                <!-- end of seconadary -->
+                                            </div>
+                                            <!-- end of pull-right class -->
+                                        </div>
+                                        <!-- end of card-footer -->
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile7" role="tabpanel">
+                        <div class="row">
+                            @foreach (var item in Model.Casos)
+                            {
+                                <div class="col-lg-4">
+                                    <div class="card card-border-warning">
+                                        <div class="card-header">
+                                            <h5>
+
+                                                @Html.DisplayFor(modelItem => item.responsavel)
+                                            </h5>
+                                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                                            <div class="dropdown-secondary dropdown f-right">
+                                                <span class="label label-info">  @Html.DisplayFor(modelItem => item.Estados)</span>
+                                                <!-- end of dropdown menu -->
+
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <ul class="list list-unstyled">
+                                                        <li>Por: @Html.DisplayFor(modelItem => item.Iduser)</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.TituloProcesso)</li>
+                                                        <li>@Html.Raw(item.Objecto)</li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="task-list-table">
+                                                <p class="task-due"><strong> Data : </strong><strong class="label label-success">@Html.DisplayFor(modelItem => item.datacreat)</strong></p>
+                                            </div>
+                                            <div class="task-board m-0">
+                                                <a asp-page="./Details" asp-route-id="@item.Ids" class="btn btn-info btn-mini b-none"><i class="icofont icofont-eye-alt m-0"></i></a>
+                                                <!-- end of dropdown-secondary -->
+                                                <!-- end of seconadary -->
+                                            </div>
+                                            <!-- end of pull-right class -->
+                                        </div>
+                                        <!-- end of card-footer -->
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

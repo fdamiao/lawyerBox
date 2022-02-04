@@ -1,0 +1,33 @@
+2021-12-15 22:20:36.6646|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:20:36.6959|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:20:36.7004|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:23:31.1879|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:23:31.2164|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:23:31.2164|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:24:21.2122|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:24:21.2463|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:24:21.2463|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:24:56.8901|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:24:56.9360|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:24:56.9360|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:25:42.2315|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:25:42.2585|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:25:42.2620|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:26:50.7719|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:26:50.8018|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:26:50.8018|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:31:52.1115|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:31:52.1455|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:31:52.1455|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:32:38.5463|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:32:38.5791|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:32:38.5791|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:33:21.1871|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:33:21.2214|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:33:21.2214|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:34:30.8977|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:34:30.9334|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:34:30.9334|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-15 22:34:58.7735|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-15 22:34:58.8058|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-15 22:34:58.8096|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox

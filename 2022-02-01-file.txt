@@ -1,0 +1,241 @@
+2022-02-01 15:27:28.8387|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 15:27:36.9037|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 15:27:37.7714|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 15:27:37.7714|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 15:27:37.7803|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 15:27:39.2326|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:8756:0588290f successfully announced in 898.8086 ms
+2022-02-01 15:27:39.2544|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:8756:0588290f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 15:27:39.6047|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:8756:0588290f all the dispatchers started
+2022-02-01 15:27:41.0806|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 15:27:41.0806|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 15:27:41.1054|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 15:27:49.8714|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-02-01 15:27:49.8768|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-02-01 15:30:12.6174|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 15:30:19.9161|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 15:30:20.0460|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 15:30:20.0460|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 15:30:20.0628|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 15:30:20.8709|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:592:fd960fe7 successfully announced in 715.5604 ms
+2022-02-01 15:30:20.8962|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:592:fd960fe7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 15:30:21.3294|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:592:fd960fe7 all the dispatchers started
+2022-02-01 15:36:08.7084|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 15:36:11.7050|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 15:36:11.8262|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 15:36:11.8313|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 15:36:11.8487|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 15:36:12.4491|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19584:3579517f successfully announced in 523.0137 ms
+2022-02-01 15:36:12.4720|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19584:3579517f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 15:36:12.6517|INFO|Hangfire.Server.ServerWatchdog|2 servers were removed due to timeout
+2022-02-01 15:36:12.9198|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19584:3579517f all the dispatchers started
+2022-02-01 18:09:22.9473|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 18:09:27.5155|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 18:09:28.4371|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 18:09:28.4371|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 18:09:28.4518|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 18:09:29.9425|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:10400:902dd543 successfully announced in 1335.7725 ms
+2022-02-01 18:09:29.9686|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:10400:902dd543 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 18:09:30.0746|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2022-02-01 18:09:30.5103|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:10400:902dd543 all the dispatchers started
+2022-02-01 18:09:31.9258|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 18:09:32.0619|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 18:09:32.0941|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 18:37:24.3727|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 18:37:26.9812|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 18:37:27.1098|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 18:37:27.1098|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 18:37:27.1098|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 18:37:27.6941|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 18:37:27.7016|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 18:37:27.7016|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 18:37:27.9338|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:6396:25dba499 successfully announced in 703.2706 ms
+2022-02-01 18:37:27.9867|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:6396:25dba499 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 18:37:28.1003|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2022-02-01 18:37:28.3962|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:6396:25dba499 all the dispatchers started
+2022-02-01 18:47:11.1228|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 18:47:13.2338|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 18:47:13.3708|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 18:47:13.3765|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 18:47:13.3765|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 18:47:14.1929|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:23396:c83ad987 successfully announced in 732.907 ms
+2022-02-01 18:47:14.2138|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:23396:c83ad987 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 18:47:14.3087|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2022-02-01 18:47:14.6095|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:23396:c83ad987 all the dispatchers started
+2022-02-01 18:47:15.2027|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 18:47:15.2027|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 18:47:15.2265|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 18:54:43.5261|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 18:54:45.2184|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 18:54:45.3330|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 18:54:45.3330|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 18:54:45.3440|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 18:54:46.2430|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:21664:25b3ee0d successfully announced in 821.8331 ms
+2022-02-01 18:54:46.2648|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:21664:25b3ee0d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 18:54:46.3859|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2022-02-01 18:54:46.7949|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:21664:25b3ee0d all the dispatchers started
+2022-02-01 18:54:50.4185|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 18:54:50.4269|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 18:54:50.4371|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 19:04:21.5269|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 19:04:23.3084|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 19:04:23.7370|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 19:04:23.7370|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 19:04:23.7370|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 19:04:24.7990|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 19:04:24.7990|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 19:04:24.8284|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 19:04:24.9892|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19580:7e3fa669 successfully announced in 1051.6291 ms
+2022-02-01 19:04:25.0104|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19580:7e3fa669 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 19:04:25.1321|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2022-02-01 19:04:25.4402|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19580:7e3fa669 all the dispatchers started
+2022-02-01 19:04:28.8039|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '8': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:27.
+2022-02-01 19:04:28.8039|WARN|Hangfire.Server.RecurringJobScheduler|Recurring job 'Startup.envianotificacao' can't be scheduled due to an error and will be retried in 00:00:15.
+2022-02-01 19:04:39.7856|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-02-01 19:04:39.7856|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-02-01 19:04:44.3430|WARN|Hangfire.Server.RecurringJobScheduler|Recurring job 'Startup.envianotificacao' can't be scheduled due to an error and will be retried in 00:00:15.
+2022-02-01 19:04:57.4269|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '8': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:54.
+2022-02-01 19:04:59.6794|WARN|Hangfire.Server.RecurringJobScheduler|Recurring job 'Startup.envianotificacao' can't be scheduled due to an error and will be retried in 00:00:15.
+2022-02-01 19:05:15.4262|WARN|Hangfire.Server.RecurringJobScheduler|Recurring job 'Startup.envianotificacao' can't be scheduled due to an error and will be retried in 00:00:15.
+2022-02-01 19:05:30.9249|WARN|Hangfire.Server.RecurringJobScheduler|Recurring job 'Startup.envianotificacao' can't be scheduled due to an error and will be retried in 00:00:15.
+2022-02-01 19:05:46.2591|ERROR|Hangfire.Server.RecurringJobScheduler|Recurring job 'Startup.envianotificacao' can't be scheduled due to an error and will be disabled.
+2022-02-01 19:05:58.1780|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '8': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:01.
+2022-02-01 19:06:59.1381|WARN|Hangfire.AutomaticRetryAttribute|Failed to process the job '8': an exception occurred. Retry attempt 4 of 10 will be performed in 00:02:04.
+2022-02-01 19:16:29.8260|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 19:16:41.7765|WARN|Hangfire.SqlServer.SqlServerObjectsInstaller|An exception occurred while trying to perform the migration. Retrying...
+2022-02-01 19:16:41.8768|WARN|Hangfire.SqlServer.SqlServerObjectsInstaller|An exception occurred while trying to perform the migration. Retrying...
+2022-02-01 19:16:41.8768|WARN|Hangfire.SqlServer.SqlServerObjectsInstaller|An exception occurred while trying to perform the migration.
+2022-02-01 19:16:41.8900|WARN|Hangfire.SqlServer.SqlServerObjectsInstaller|Was unable to perform the Hangfire schema migration due to an exception. Ignore this message unless you've just installed or upgraded Hangfire.
+2022-02-01 19:16:42.1827|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 19:16:42.1874|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 19:16:42.1874|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 19:16:42.2785|ERROR|Hangfire.Processing.BackgroundExecution|Execution BackgroundServerProcess is in the Failed state now due to an exception, execution will be retried no more than in 00:00:15
+2022-02-01 19:16:42.8584|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 19:16:42.8584|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 19:16:42.8856|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 19:16:48.9987|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'weblawyersDB' on server 'DESKTOP-SD2VNE6'.
+2022-02-01 19:16:49.2260|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'WeblawyersBox.Data.ApplicationDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
+ ---> System.ComponentModel.Win32Exception (233): No process is on the other end of the pipe.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:deae6aec-273c-4209-92e4-17b8ae39b77c
+Error Number:233,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-02-01 19:17:07.3088|ERROR|Hangfire.Processing.BackgroundExecution|Execution BackgroundServerProcess is still in the Failed state for 00:00:25.0224980 due to an exception, will be retried no more than in 00:00:15
+2022-02-01 19:18:40.0730|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 19:18:41.9977|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 19:18:42.1227|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 19:18:42.1285|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 19:18:42.1285|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 19:18:42.7317|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 19:18:42.7390|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 19:18:42.7503|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 19:18:43.0941|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19356:82d9a181 successfully announced in 855.6678 ms
+2022-02-01 19:18:43.1220|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19356:82d9a181 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 19:18:43.7115|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:19356:82d9a181 all the dispatchers started
+2022-02-01 19:28:24.1057|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 19:28:27.8788|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 19:28:27.9899|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 19:28:27.9899|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 19:28:27.9994|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 19:28:28.6053|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 19:28:28.6127|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 19:28:28.6229|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 19:28:28.9053|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:20108:4c671da2 successfully announced in 835.2378 ms
+2022-02-01 19:28:28.9407|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:20108:4c671da2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 19:28:29.1801|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout
+2022-02-01 19:28:29.5429|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:20108:4c671da2 all the dispatchers started
+2022-02-01 19:37:44.7879|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-02-01 19:37:44.7879|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-02-01 20:04:45.5389|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Start installing Hangfire SQL objects...
+2022-02-01 20:04:50.9652|INFO|Hangfire.SqlServer.SqlServerObjectsInstaller|Hangfire SQL objects installed.
+2022-02-01 20:04:51.1802|INFO|Hangfire.BackgroundJobServer|Starting Hangfire Server using job storage: 'SQL Server: DESKTOP-SD2VNE6@weblawyersDB'
+2022-02-01 20:04:51.1802|INFO|Hangfire.BackgroundJobServer|Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2022-02-01 20:04:51.1902|INFO|Hangfire.BackgroundJobServer|Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-02-01 20:04:51.9655|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-02-01 20:04:51.9722|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-02-01 20:04:51.9722|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-02-01 20:04:52.4862|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:9348:28f88c28 successfully announced in 1155.7257 ms
+2022-02-01 20:04:52.5567|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:9348:28f88c28 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-02-01 20:04:53.2298|INFO|Hangfire.Server.BackgroundServerProcess|Server desktop-sd2vne6:9348:28f88c28 all the dispatchers started
+2022-02-01 20:05:03.1057|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-02-01 20:05:03.1128|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-02-01 20:09:38.5228|INFO|WeblawyersBox.Pages.eventos.CriarEventosModel|Criar eventos com sucessover pecas do crima
+2022-02-01 20:09:52.7888|INFO|Hangfire.Server.ServerWatchdog|1 servers were removed due to timeout

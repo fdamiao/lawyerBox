@@ -1,0 +1,90 @@
+﻿@page
+@model WeblawyersBox.Pages.Lowyeslicencas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].valorpago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].meses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].datapagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].comentarios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].idempresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].estadoss)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].idlicensa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].datacreat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].Iduser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagamentoLicenca[0].responsavel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.pagamentoLicenca) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.valorpago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.meses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datapagamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comentarios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idempresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estadoss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idlicensa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datacreat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iduser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.responsavel)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

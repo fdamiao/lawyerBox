@@ -1,0 +1,90 @@
+﻿@page
+@model WeblawyersBox.Pages.Despesas.listarDespesaModel
+
+@{
+    ViewData["Title"] = "listarDespesa";
+}
+
+<h1>listarDespesa</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].descricaoDovalor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].datarecebimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].comprovativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].tipofacturacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].Despesaestatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].idprocesso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].datacreat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].Iduser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.despesad[0].responsavel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.despesad) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricaoDovalor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datarecebimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comprovativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipofacturacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Despesaestatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idprocesso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datacreat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iduser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.responsavel)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,82 @@
+﻿@page
+@model WeblawyersBox.Pages.Lowyeslicencas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>pagamentoLicenca</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.valorpago)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.valorpago)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.meses)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.meses)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.datapagamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.datapagamento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.comentarios)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.comentarios)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.idempresa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.idempresa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.estadoss)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.estadoss)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.idlicensa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.idlicensa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.datacreat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.datacreat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.Iduser)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.Iduser)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamentoLicenca.responsavel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pagamentoLicenca.responsavel)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="pagamentoLicenca.Ids" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

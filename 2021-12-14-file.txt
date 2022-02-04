@@ -1,0 +1,51 @@
+2021-12-14 00:04:06.9899|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 00:04:07.5253|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 00:04:07.7580|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 00:07:19.0615|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 00:07:19.1588|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 00:07:19.1685|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 00:10:22.6263|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 00:10:22.7362|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 00:10:22.7510|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 00:14:15.4353|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 00:14:15.5411|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 00:14:15.5411|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 17:45:09.4289|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 17:45:09.7192|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 17:45:09.7289|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 17:46:18.2054|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-14 17:46:20.2577|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2021-12-14 18:06:35.4366|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:06:35.4977|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:06:35.4977|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:11:39.9538|INFO|WeblawyersBox.Areas.Identity.Pages.Account.LogoutModel|User logged out.
+2021-12-14 18:16:46.4978|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:16:46.5638|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:16:46.5638|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:19:32.7160|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:19:32.7822|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:19:32.7822|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:20:46.0701|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:20:46.1321|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:20:46.1409|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:21:51.8795|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:21:51.9276|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:21:51.9334|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:29:24.9943|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:29:25.0799|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:29:25.0799|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:31:20.7989|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 18:31:20.8471|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 18:31:20.8471|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 18:32:07.4381|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-14 19:12:14.9069|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 19:12:15.1334|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 19:12:15.1646|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 19:14:33.3110|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-14 19:16:28.2648|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-14 19:18:23.7512|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-14 19:21:18.0458|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-14 19:21:18.1044|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-14 19:21:18.1044|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-14 19:22:51.7084|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-14 19:24:26.9378|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

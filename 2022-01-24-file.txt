@@ -1,0 +1,17 @@
+2022-01-24 20:42:35.5173|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-24 20:42:35.7454|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-24 20:42:35.7511|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-24 20:42:51.7469|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-24 20:42:51.7865|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-24 20:43:06.2863|INFO|WeblawyersBox.Areas.Identity.Pages.Account.LogoutModel|User logged out.
+2022-01-24 20:44:07.0512|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2022-01-24 20:44:09.0039|WARN|Microsoft.AspNetCore.Identity.UserManager|User (null) validation failed: DuplicateUserName.
+2022-01-24 20:47:04.5697|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-24 20:47:04.6430|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-24 20:47:04.6727|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-24 21:02:06.3417|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-24 21:02:06.4107|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-24 21:02:06.4201|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-24 21:07:40.2614|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-24 21:07:40.3342|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-24 21:07:40.3342|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox

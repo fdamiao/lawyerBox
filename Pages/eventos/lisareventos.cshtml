@@ -1,0 +1,102 @@
+﻿@page
+@model WeblawyersBox.Pages.eventos.lisareventosModel
+
+@{
+    ViewData["Title"] = "lisareventos";
+}
+
+<h1>lisareventos</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].DataMarcada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].Datatermino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].evento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].dataCreataud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].LocaldaAudiencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].prioridade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].descricaevento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].Processo_Tb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].datacreat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].Iduser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Audiencia_tab[0].responsavel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Audiencia_tab) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataMarcada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datatermino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.evento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataCreataud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocaldaAudiencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prioridade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricaevento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Processo_Tb.Ids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datacreat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iduser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.responsavel)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Ids">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Ids">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Ids">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

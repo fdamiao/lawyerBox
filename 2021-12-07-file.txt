@@ -1,0 +1,40 @@
+2021-12-07 15:20:11.2835|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 15:20:11.5379|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-07 15:20:11.5948|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 15:20:11.9642|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-07 15:20:14.1533|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-07 15:22:09.3941|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 15:22:09.7695|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-07 15:22:09.7777|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 15:24:13.3330|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 15:24:13.4056|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2021-12-07 15:24:13.4056|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 16:02:44.5956|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 16:02:44.6787|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2021-12-07 16:02:44.6859|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 16:04:38.3942|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 16:04:38.4462|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2021-12-07 16:04:38.4563|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 21:45:10.3876|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 21:45:10.8094|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2021-12-07 21:45:10.8094|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 21:46:42.6835|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 21:46:42.7237|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2021-12-07 21:46:42.7314|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 21:46:43.3050|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-07 21:46:43.3510|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An exception was thrown attempting to execute the error handler.
+2021-12-07 21:46:43.3706|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "17870283340196610057", Request ID "8000000a-0004-f800-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+2021-12-07 21:46:56.8726|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-07 21:46:56.8726|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An exception was thrown attempting to execute the error handler.
+2021-12-07 21:46:56.8825|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18302628917309079557", Request ID "80000006-0007-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+2021-12-07 21:48:05.0882|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 21:48:05.1638|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production
+2021-12-07 21:48:05.1638|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 21:48:05.1892|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-07 21:48:05.2129|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An exception was thrown attempting to execute the error handler.
+2021-12-07 21:48:05.2378|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18086456118015426564", Request ID "80000005-0003-fb00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+2021-12-07 21:53:45.1173|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-07 21:53:45.2075|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-07 21:53:45.2151|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-07 21:53:45.2283|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-07 21:53:46.2526|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

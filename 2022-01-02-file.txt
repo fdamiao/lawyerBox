@@ -1,0 +1,234 @@
+2022-01-02 16:09:31.2235|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:09:31.3131|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:09:31.5415|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:12:04.2681|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'db_a7d5c7_weblawyersdb' on server 'SQL5108.site4now.net'.
+2022-01-02 16:12:05.2782|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'WeblawyersBox.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2022-01-02 16:14:35.4481|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:14:35.4962|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:14:35.5031|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:14:55.2306|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 16:15:50.5676|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 16:21:53.3686|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 16:36:33.6070|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:36:33.6470|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:36:33.6470|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:40:02.1154|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:40:02.1539|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:40:02.1584|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:41:57.0356|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 16:45:17.5704|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:45:17.6089|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:45:17.6089|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:46:44.4663|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:46:44.5041|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:46:44.5041|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:48:25.5508|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:48:25.5901|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:48:25.5958|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:54:11.9615|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:54:12.0043|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:54:12.0043|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 16:57:42.0494|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 16:57:42.0900|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 16:57:42.0951|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 17:04:39.9064|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 17:04:39.9570|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 17:04:39.9570|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 17:04:44.0670|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 17:14:58.7384|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 17:14:58.7815|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 17:14:58.7815|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 17:15:02.2261|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 17:26:00.7821|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 17:26:00.8256|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 17:26:00.8312|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 17:33:24.6870|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 17:33:24.7476|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 17:33:24.7563|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 17:37:46.7226|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 17:37:46.7986|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 17:37:46.7986|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 17:38:04.2247|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 17:39:44.6809|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 18:43:30.1256|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 18:43:30.1726|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 18:43:30.1726|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 18:46:57.3688|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 18:46:57.4061|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 18:46:57.4061|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 18:56:03.8160|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 18:56:03.8496|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 18:56:03.8496|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 18:57:44.5175|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 18:57:44.5631|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 18:57:44.5631|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:01:16.1496|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:01:16.1904|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:01:16.1904|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:07:24.7529|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:07:24.8004|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:07:24.8004|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:07:48.6688|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 19:20:36.4332|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:20:36.5022|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:20:36.5022|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:21:10.3584|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:21:10.4020|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:21:10.4085|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:24:45.7916|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:24:45.8286|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:24:45.8286|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:32:10.0405|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:32:10.0793|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:32:10.0793|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:35:27.8955|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:35:27.9299|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:35:27.9299|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:36:34.6300|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:36:34.6681|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:36:34.6736|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:37:58.8718|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:37:58.9566|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:37:58.9566|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:38:00.4065|ERROR|Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer|Connection ID "18374686511347007561", Request ID "8000004a-0007-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+2022-01-02 19:38:44.6637|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:38:44.7693|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:38:44.7834|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:38:51.5568|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 19:47:25.1558|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:47:25.2144|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:47:25.2253|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 19:47:29.5079|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 19:49:46.6922|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 19:49:46.7436|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 19:49:46.7503|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 20:07:03.2112|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 20:07:03.2795|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 20:07:03.2795|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 20:07:07.3407|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 20:07:07.3418|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 20:07:38.4355|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 20:07:38.4355|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:27:13.4228|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:27:13.4867|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:27:13.4867|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:27:18.0804|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:27:18.1277|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:27:18.1277|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:27:21.2098|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:27:21.2098|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:31:41.4586|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:31:41.4995|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:31:41.4995|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:31:44.1695|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:31:44.1704|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:33:18.0436|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:33:18.0833|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:33:18.0833|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:33:21.1998|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:33:21.1998|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:33:24.1166|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:33:24.1166|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:35:14.3321|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:35:14.3321|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:41:15.9132|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:41:15.9617|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:41:15.9671|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:41:19.0466|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:41:19.0466|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:41:19.6296|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:41:19.6296|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:41:32.3818|INFO|WeblawyersBox.Pages.IndexModel|Buscar 
+2022-01-02 21:41:55.8058|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:41:55.8058|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:42:45.9543|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:42:45.9543|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:44:51.6127|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:44:51.6534|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:44:51.6587|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:44:54.3961|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:44:54.3961|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:46:04.4737|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:46:04.4737|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:46:26.9792|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:46:26.9792|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:47:13.0125|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:47:13.0134|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:48:01.2171|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:48:01.2570|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:48:01.2570|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:48:03.5839|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:48:03.5839|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:48:53.6738|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:48:53.7250|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:48:53.7250|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:48:56.6782|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:48:56.6782|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:50:13.3298|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:50:13.3685|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:50:13.3733|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:50:15.8890|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:50:15.8890|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 21:51:02.0229|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 21:51:02.0641|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 21:51:02.0641|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 21:51:04.6024|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-02 21:51:04.6024|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-02 22:27:30.4595|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 22:27:30.4987|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 22:27:30.4987|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-02 22:27:47.4462|ERROR|Microsoft.EntityFrameworkCore.Database.Connection|An error occurred using the connection to database 'db_a7d5c7_weblawyersdb' on server 'SQL5108.site4now.net'.
+2022-01-02 22:27:47.9260|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'WeblawyersBox.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+2022-01-02 22:42:19.3285|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-02 22:42:19.3960|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-02 22:42:19.3960|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox

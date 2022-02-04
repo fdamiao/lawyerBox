@@ -1,0 +1,39 @@
+2022-01-22 08:14:55.5852|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:14:55.5955|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:22:29.7638|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-22 08:22:29.8274|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-22 08:22:29.8401|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-22 08:22:34.8660|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:22:34.8660|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:24:08.0494|INFO|WeblawyersBox.Pages.eventos.CriarEventosModel|Criar eventos com sucessomoradia
+2022-01-22 08:24:19.7831|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:24:19.7929|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:26:45.6775|INFO|WeblawyersBox.Pages.eventos.CriarEventosModel|Criar eventos com sucessoaudiencia
+2022-01-22 08:26:50.3307|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:26:50.3307|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:43:39.8744|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-22 08:43:39.9631|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-22 08:43:39.9770|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-22 08:43:47.5451|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:43:47.5451|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:48:44.0239|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-22 08:48:44.1939|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-22 08:48:44.2378|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-22 08:48:52.0297|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:48:52.0297|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:49:47.1183|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:49:47.1211|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:51:41.9071|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-22 08:51:42.0136|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-22 08:51:42.0281|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-22 08:51:49.6203|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:51:49.6203|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 08:52:05.1553|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 08:52:05.1553|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 09:11:44.1907|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2022-01-22 09:11:44.2771|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2022-01-22 09:11:44.2771|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2022-01-22 09:11:51.3596|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 09:11:51.3596|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial
+2022-01-22 09:13:39.4966|INFO|WeblawyersBox.Pages.IndexModel|Nao possui uma conta paga
+2022-01-22 09:13:39.4966|INFO|WeblawyersBox.Pages.IndexModel|Listar dados na pagina inicial

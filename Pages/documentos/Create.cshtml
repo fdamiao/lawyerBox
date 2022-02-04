@@ -1,0 +1,47 @@
+﻿@page
+@model WeblawyersBox.Pages.documentos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <h3><i class="fa fa-archive"></i>  @Html.DisplayFor(model => model.Processo_Tb.tipo)- @Html.DisplayFor(model => model.Processo_Tb.TituloProcesso)</h3>
+
+  
+<hr />
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-header-text"><i class="icofont icofont-attachment"></i> Documentos </h5>
+        </div>
+        <div class="card-block ">
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input asp-for="Documentos_Processos_tb. Iduser" hidden="hidden" value="@User.Identity.Name" />
+                <div class="form-group">
+                    <label asp-for="Documentos_Processos_tb.idProcesso" class="control-label" hidden="hidden"></label>
+                    <input asp-for="Documentos_Processos_tb.idProcesso" class="form-control" hidden="hidden" value="@Request.Query["id"]" />
+                </div>
+                <div class="form-group">
+
+                    <label asp-for="fileUpload.FormFiles" class="control-label"></label><br />
+                    <input type="file" asp-for="fileUpload.FormFiles" multiple aria-label="File browser" accept=".xls, .xlsx,.pdf,.jpeg,.docx,.doc,.jpg">
+                    <span asp-validation-for="fileUpload.FormFiles" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" value="Create" class="btn btn-primary"><i class="fa fa-save"></i> Salvar</button>
+                    <a asp-page="/Processo/Details" asp-route-id="@Request.Query["id"]" class="btn btn-secondary"><i class="fa fa-backward"></i> voltar</a>
+
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    </div>
+  
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

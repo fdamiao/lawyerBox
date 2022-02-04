@@ -1,0 +1,44 @@
+﻿@page
+@model WeblawyersBox.Pages.Processo.listarprocessosModel
+
+@{
+    ViewData["Title"] = "listarprocessos";
+}
+
+<h1><i class="fa fa-folder-open"></i> Processos</h1>
+
+<div class="card">
+    
+    <div class="card-block">
+        <!-- Search result found start -->
+        
+        <div class=" table-responsive">
+            <table id="example1" class="table table-striped table-valign-middle">
+                
+                <tbody>
+                    @foreach (var item in Model.Processo_tb)
+                    {
+                        <tr>
+                            <td>
+                            
+                                <div class="search-content">
+                                    <img class="card-img-top" src="~/assets/images/1615060.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <h4 class="card-title"> <a asp-page="./Details" asp-route-id="@item.Ids">@item.tipo - @item.TituloProcesso</a></h4>
+                                        <p>@item.buscarnome()</p>
+                                        <p class="card-text">@Html.Raw(item.Observacao)</p>
+                                        <p class="card-text"><small class="text-muted">@TimeAgo.TimeAgos(item.datacreat.Date)</small></p>
+                                    </div>
+                                </div>
+                            </td>
+
+                         
+
+                          
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+2021-12-19 15:00:33.0371|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-19 15:00:33.2403|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-19 15:00:33.2483|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-19 15:01:12.8733|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-19 15:01:20.0767|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+2021-12-19 15:02:52.3089|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-19 15:02:52.4535|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-19 15:02:52.4535|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-19 15:03:15.7060|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-19 15:03:15.7816|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-19 15:03:15.7816|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-19 15:05:49.8026|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2021-12-19 15:05:49.8728|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2021-12-19 15:05:49.8728|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Advogados\Webcore\WeblawyersBox
+2021-12-19 15:08:28.4124|INFO|WeblawyersBox.Areas.Identity.Pages.Account.LogoutModel|User logged out.
+2021-12-19 15:08:35.5538|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user 50ad06ae-c592-4da8-58c4-08d9ba91d4dc.
+2021-12-19 15:08:35.5576|WARN|Microsoft.AspNetCore.Identity.SignInManager|User 50ad06ae-c592-4da8-58c4-08d9ba91d4dc failed to provide the correct password.
+2021-12-19 15:08:42.1885|WARN|Microsoft.AspNetCore.Identity.UserManager|Invalid password for user 50ad06ae-c592-4da8-58c4-08d9ba91d4dc.
+2021-12-19 15:08:42.1983|WARN|Microsoft.AspNetCore.Identity.SignInManager|User 50ad06ae-c592-4da8-58c4-08d9ba91d4dc failed to provide the correct password.
